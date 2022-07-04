@@ -1,5 +1,7 @@
+import Projects from "./Projects"
+
 export default function Main(props) {
     return (
-        <div className="Main">This is the Main component</div>
+        <div className="Main"><Projects /></div>
     )
 }
