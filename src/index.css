@@ -40,10 +40,156 @@ code {
   color: black;
 }
 
-#Github:hover {
+.Github:hover {
   color: dimgray;
 }
 
 #Linkedin:hover {
   color: cornflowerblue;
+}
+
+
+/* //////////////Projects//////////////////////// */
+
+article{
+  display: flex;
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
+#Projects > h2 {
+  font-size: 3rem;   
+  /* font-family: sans-serif; */
+  padding-left: 5%;
+}
+
+.my-projects{
+  width: 90%;
+}
+
+#GH-picture{
+  background: url(../public/images/GH/GH1.png);
+  background-repeat: round;
+}
+
+article > div {
+  flex: 1;
+  /* border: solid black; */
+  border-radius: 10px 0 0 10px;
+}
+
+.game-description{
+  flex: 2;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 320px;
+  background: rgb(255 255 255 / 70%);
+  overflow: auto;
+  padding: 2px 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.game-description::-webkit-scrollbar {
+  display: none;
+}
+
+.game-description > h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.game-description > p{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 5px;
+  padding: 0 1%;
+  text-indent: 2%;
+  line-height: 1.2em;
+  text-align: justify;
+}
+
+.game-description > ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  height: 100%;
+}
+
+#GH{
+  font-size: 3rem;
+  color: #007bff;
+}
+
+.tech{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0 5px 0;
+}
+
+.tech > div {
+  position: relative;
+}
+
+.tech > div > p {
+  display: none;
+  margin: 0;
+  transition: .2s;
+  height: 150%;
+  width: 110%;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech > div:hover > p {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  transition: .1s;
+}
+
+/* /// Tech icons //// */
+.html{
+  color: crimson;
+}
+
+.css3{
+  color: cornflowerblue;
+}
+
+.js-sq{
+  color: goldenrod;    
+}
+
+.mdb{
+  color: forestgreen;
+}
+
+.react{
+  color: aqua;
+}
+
+.node{
+  color: darkorange;
+}
+
+.heroku {
+  color: purple;
+}
+
+/* /// Project icons //// */
+#unit3:hover{
+  color: #007bff;
 }
