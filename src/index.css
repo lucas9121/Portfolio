@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Header{
+  background-color: beige;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.Header > ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+#logo {
+  background: url(../public/logo.png);
+  background-repeat: round;
+  height: 100%;
+  width: 13%;
+  max-width: 255px;
+  min-width: 140px;
+}
+
+.Link {
+  color: black;
+}
+
+#Github:hover {
+  color: dimgray;
+}
+
+#Linkedin:hover {
+  color: cornflowerblue;
+}
