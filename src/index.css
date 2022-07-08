@@ -72,6 +72,11 @@ article{
   background-repeat: round;
 }
 
+#RS-picture{
+  background: url(../public/images/RFT/RFT1.png);
+  background-repeat: round;
+}
+
 article > div {
   flex: 1;
   /* border: solid black; */
@@ -130,6 +135,11 @@ article > div {
   color: #007bff;
 }
 
+#RFT{
+  font-size: 3rem;
+  color: #f2782f;
+}
+
 .tech{
   display: flex;
   justify-content: center;
@@ -165,7 +175,7 @@ article > div {
   color: crimson;
 }
 
-.css3{
+.css{
   color: cornflowerblue;
 }
 
@@ -189,7 +199,15 @@ article > div {
   color: purple;
 }
 
+.bootstrap {
+  color: purple;
+}
+
 /* /// Project icons //// */
 #unit3:hover{
   color: #007bff;
+}
+
+#unit4:hover{
+  color: #f2782f;
 }
