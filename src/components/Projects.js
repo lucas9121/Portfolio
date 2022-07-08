@@ -1,8 +1,9 @@
 import {BsGithub, BsJoystick} from 'react-icons/bs'
 import {AiOutlineHtml5} from 'react-icons/ai'
-import {FaCss3Alt} from 'react-icons/fa'
+import {FaCss3Alt, FaBootstrap, FaTruck} from 'react-icons/fa'
 import {IoLogoJavascript, IoLogoNodejs} from 'react-icons/io'
 import {SiMongodb, SiExpress, SiReact, SiHeroku} from 'react-icons/si'
+import {FcGoogle} from 'react-icons/fc'
 
 export default function Projects(props) {
     return (
@@ -49,10 +50,55 @@ export default function Projects(props) {
                     </div>
                     <ul>
                         <li><a className="Link Github" href="https://github.com/lucas9121/Gamehub" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className="Link" id='GH' href="https://gamehub-react.herokuapp.com/games" target="_blank"><BsJoystick style={{height: '2rem', width: '3rem'}} /></a></li>
+                        <li><a className="Link" href="https://gamehub-react.herokuapp.com/games" target="_blank"><BsJoystick style={{height: '2rem', width: '3rem'}} id='unit3'/></a></li>
                     </ul>
                 </div>
             </article>
+            <article className="my-projects">
+                <div id="RS-picture"></div>
+                <div className="game-description">
+                    <h1>Roaming Spoon</h1>
+                    <p><span id="RFT">T</span>he Roaming spoon was a group project built in collaboration with a UX team. In the full-stack role, I helped connect the back-end to the front-end and build the search page. Discover amazing food trucks in your area using the Roaming Spoon app! Use The Roaming Spoon to search your favorite food trucks and see their current location. Find out more information for any food truck like location, phone number, business hours, and reviews.</p>
+                    <div className="tech">
+                        <div >
+                            <p>HTML</p>
+                            <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                        </div>
+                        <div>
+                            <p>CSS</p>
+                            <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                        </div>
+                        <div>
+                            <p>JavaScript</p>
+                            <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                        </div>
+                        <div>
+                            <p>MongoDB</p>
+                            <SiMongodb style={{height: '2rem', width: '3rem'}} className='mdb' />
+                        </div>
+                        <div>
+                            <p>Google API</p>
+                            <FcGoogle style={{height: '2rem', width: '3rem'}} className='google'/>
+                        </div>
+                        <div>
+                            <p>React</p>
+                            <SiReact style={{height: '2rem', width: '3rem'}} className='react' />
+                        </div>
+                        <div>
+                            <p>NodeJS</p>
+                            <IoLogoNodejs style={{height: '2rem', width: '3rem'}} className='node' />
+                        </div>
+                        <div>
+                            <p>Bootstrap</p>
+                            <FaBootstrap style={{height: '2rem', width: '3rem'}} className='bootstrap'/>
+                        </div>
+                    </div>
+                    <ul>
+                    <li><a className="Link Github" href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className="Link" href="https://roaming-spoon.herokuapp.com/" target="_blank"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
+                    </ul>
+                </div>
+                </article>
         </div>
     )
 }
