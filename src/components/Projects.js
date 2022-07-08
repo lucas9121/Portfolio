@@ -1,8 +1,8 @@
 import {BsGithub, BsJoystick} from 'react-icons/bs'
 import {AiOutlineHtml5} from 'react-icons/ai'
-import {FaCss3Alt, FaBootstrap, FaTruck} from 'react-icons/fa'
+import {FaCss3Alt, FaBootstrap, FaTruck, FaDungeon} from 'react-icons/fa'
 import {IoLogoJavascript, IoLogoNodejs} from 'react-icons/io'
-import {SiMongodb, SiExpress, SiReact, SiHeroku} from 'react-icons/si'
+import {SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop} from 'react-icons/si'
 import {FcGoogle} from 'react-icons/fc'
 
 export default function Projects(props) {
@@ -60,7 +60,7 @@ export default function Projects(props) {
                     <h1>Roaming Spoon</h1>
                     <p><span id="RFT">T</span>he Roaming spoon was a group project built in collaboration with a UX team. In the full-stack role, I helped connect the back-end to the front-end and build the search page. Discover amazing food trucks in your area using the Roaming Spoon app! Use The Roaming Spoon to search your favorite food trucks and see their current location. Find out more information for any food truck like location, phone number, business hours, and reviews.</p>
                     <div className="tech">
-                        <div >
+                        <div>
                             <p>HTML</p>
                             <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
                         </div>
@@ -94,11 +94,40 @@ export default function Projects(props) {
                         </div>
                     </div>
                     <ul>
-                    <li><a className="Link Github" href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className="Link Github" href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
                         <li><a className="Link" href="https://roaming-spoon.herokuapp.com/" target="_blank"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
                     </ul>
                 </div>
-                </article>
+            </article>
+            <article className="my-projects">
+                <div id="WV-picture"></div>
+                <div className="game-description">
+                    <h1>Wars of Vogrora</h1>
+                    <p><span id="WOV">W</span>ars of Vogrora is a RPG turn-style game built using vanila JS. Create a character and join in the fight to save your planet from the forces of evil. Buy potions in the store to increase your attack and defense. Click on the work button to earn money in exchange for energy. Click on the eat button to replenish energy by using money.</p>
+                    <div className="tech">
+                        <div>
+                            <p>HTML</p>
+                            <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                        </div>
+                        <div>
+                            <p>CSS</p>
+                            <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                        </div>
+                        <div>
+                            <p>JavaScript</p>
+                            <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                        </div>
+                        <div>
+                            <p>Photoshop</p>
+                            <SiAdobephotoshop style={{height: '2rem', width: '3rem'}} className='ps'/>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a className="Link Github" href="https://github.com/lucas9121/Wars-of-Vogrora" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className="Link" href="https://lucas9121.github.io/Wars-of-Vogrora/" target="_blank"><FaDungeon style={{height: '2rem', width: '3rem'}} id='unit1'/></a></li>
+                    </ul>
+                </div>
+            </article>
         </div>
     )
 }
