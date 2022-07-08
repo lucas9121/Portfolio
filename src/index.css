@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(357deg, #00000091, #1c586ad4);
 }
 
 code {
@@ -77,6 +83,11 @@ article{
   background-repeat: round;
 }
 
+#WV-picture{
+  background: url(../public/images/WOV/WOV1.png);
+  background-repeat: round;
+}
+
 article > div {
   flex: 1;
   /* border: solid black; */
@@ -138,6 +149,11 @@ article > div {
 #RFT{
   font-size: 3rem;
   color: #f2782f;
+}
+
+#WOV{
+  font-size: 3rem;
+  color: red;
 }
 
 .tech{
@@ -203,6 +219,10 @@ article > div {
   color: purple;
 }
 
+.ps {
+  color: darkblue;
+}
+
 /* /// Project icons //// */
 #unit3:hover{
   color: #007bff;
@@ -210,4 +230,8 @@ article > div {
 
 #unit4:hover{
   color: #f2782f;
+}
+
+#unit1:hover{
+  color: red;
 }
