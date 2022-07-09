@@ -19,7 +19,8 @@ code {
 }
 
 .Header{
-  background-color: beige;
+  /* background-color: beige; */
+  background: rgb(234 178 39);
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -54,50 +55,61 @@ code {
   color: cornflowerblue;
 }
 
+/* //////////////Main//////////////////////// */
 
-/* //////////////Projects//////////////////////// */
-
-article{
-  display: flex;
-  margin: 0 auto;
-  padding: 2% 0;
-}
-
-#Projects > h2 {
-  font-size: 3rem;   
-  /* font-family: sans-serif; */
+.Main > h2 {
+  font-size: 3rem;
   padding-left: 5%;
 }
 
-.my-projects{
+/* //////////////Projects//////////////////////// */
+
+#Projects {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   width: 90%;
+}
+
+.my-projects{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2% 0;
+  height: 910px;
+}
+
+.my-projects > div {
+  height: 400px;
+  width: 500px;
 }
 
 #GH-picture{
   background: url(../public/images/GH/GH1.png);
   background-repeat: round;
+  padding: 0 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 #RS-picture{
   background: url(../public/images/RFT/RFT1.png);
   background-repeat: round;
+  padding: 0 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 #WV-picture{
   background: url(../public/images/WOV/WOV1.png);
   background-repeat: round;
-}
-
-article > div {
-  flex: 1;
-  /* border: solid black; */
-  border-radius: 10px 0 0 10px;
+  padding: 0 15px;
+  border-radius: 10px 10px 0 0;
 }
 
 .game-description{
   flex: 2;
   border-left: none;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0 10px 10px;
   color: black;
   display: flex;
   flex-direction: column;
