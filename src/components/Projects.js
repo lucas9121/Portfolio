@@ -8,7 +8,6 @@ import {FcGoogle} from 'react-icons/fc'
 export default function Projects(props) {
     return (
         <div id="Projects">
-            <h2>My Projects</h2>
             <article className="my-projects">
                 <div id="GH-picture"></div>
                 <div className="game-description">
