@@ -159,29 +159,22 @@ border-radius: 50%;
 }
 
 .my-projects > div {
+  max-height: 500px;
+  max-width: 600px;
+}
+
+.imgslider{
   height: 400px;
-  width: 500px;
-}
-
-#GH-picture{
-  background: url(../public/images/GH/GH1.png);
-  background-repeat: round;
-  padding: 0 15px;
+  width: 530px;
   border-radius: 10px 10px 0 0;
 }
 
-#RS-picture{
-  background: url(../public/images/RFT/RFT1.png);
-  background-repeat: round;
-  padding: 0 15px;
-  border-radius: 10px 10px 0 0;
+.slick-list{
+  border-radius: 10px 10px 0 0 !important;
 }
 
-#WV-picture{
-  background: url(../public/images/WOV/WOV1.png);
-  background-repeat: round;
-  padding: 0 15px;
-  border-radius: 10px 10px 0 0;
+.slick-slider > button {
+  display: none !important;
 }
 
 .game-description{
@@ -192,10 +185,11 @@ border-radius: 50%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 320px;
+  min-height: 500px;
+  width: 500px;
   background: gainsboro;
   overflow: auto;
-  padding: 2px 15px;
+  padding: 15px 15px 0 15px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
