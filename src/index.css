@@ -10,7 +10,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(357deg, #00000091, #1c586ad4);
 }
 
 code {
@@ -21,6 +20,7 @@ code {
 .Header{
   /* background-color: beige; */
   background: rgb(234 178 39);
+  /* background: rgb(85 118 152); */
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ code {
 }
 
 .Github:hover {
-  color: dimgray;
+  color: white;
 }
 
 #Linkedin:hover {
@@ -63,7 +63,7 @@ code {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .switch {
@@ -88,7 +88,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: gold;
+background-color: #ffff00ab;
 -webkit-transition: .4s;
 transition: .4s;
 }
@@ -129,6 +129,11 @@ border-radius: 50%;
 
 
 /* //////////////Main//////////////////////// */
+
+.Main{
+  background: linear-gradient(0deg, rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.8), rgb(240 254 255 / 70%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(223 203 157 / 70%), rgb(234 178 39));
+  /* background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129)); */
+}
 
 .Main > h2 {
   font-size: 3rem;
