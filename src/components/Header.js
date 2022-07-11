@@ -10,9 +10,9 @@ export default function Headers({toggle, setToggle, bckgd}) {
                 <li style={{height: '100%'}}>
                     <div id="toggle">
                         <BsSunFill style={{color: 'yellow'}} />
-                        <label class="switch">
+                        <label className="switch">
                             <input type="checkbox" onClick={() => {setToggle(!toggle)}} />
-                            <span class="slider round"></span>
+                            <span className="slider round"></span>
                         </label>
                         <BsMoonFill style={{color: '#2196F3'}} />
                     </div>
