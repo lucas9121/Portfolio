@@ -193,7 +193,7 @@ border-radius: 50%;
   flex-direction: column;
   text-align: center;
   height: 320px;
-  background: rgb(255 255 255 / 70%);
+  background: gainsboro;
   overflow: auto;
   padding: 2px 15px;
   -ms-overflow-style: none;
