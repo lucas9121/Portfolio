@@ -4,12 +4,16 @@ import {FaCss3Alt, FaBootstrap, FaTruck, FaDungeon} from 'react-icons/fa'
 import {IoLogoJavascript, IoLogoNodejs} from 'react-icons/io'
 import {SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop} from 'react-icons/si'
 import {FcGoogle} from 'react-icons/fc'
+import GHImages from "./GHImages"
+import RFTImages from './RFTImages'
+import WOVImages from './WOVImages'
+import ImageSlider from './ImageSlider'
 
 export default function Projects(props) {
     return (
         <div id="Projects">
             <article className="my-projects">
-                <div id="GH-picture"></div>
+                <ImageSlider images={GHImages} />
                 <div className="game-description">
                     <h1>Gamehub</h1>
                     <p><span id="GH">G</span>amehub is a full CRUD mock online gaming store. You can browse through different game titles or search for them in the search bar. Some of the features of available include; purchasing games, writing reviews, as well as editing or deleting your reviews, creating and editing your own games and editing your account. Sign up with a Gamer or Developer account to try all of the different features the website has to offer.</p>
@@ -54,7 +58,7 @@ export default function Projects(props) {
                 </div>
             </article>
             <article className="my-projects">
-                <div id="RS-picture"></div>
+                <ImageSlider images={RFTImages} />
                 <div className="game-description">
                     <h1>Roaming Spoon</h1>
                     <p><span id="RFT">T</span>he Roaming spoon was a group project built in collaboration with a UX team. In the full-stack role, I helped connect the back-end to the front-end and build the search page. Discover amazing food trucks in your area using the Roaming Spoon app! Use The Roaming Spoon to search your favorite food trucks and see their current location. Find out more information for any food truck like location, phone number, business hours, and reviews.</p>
@@ -99,7 +103,7 @@ export default function Projects(props) {
                 </div>
             </article>
             <article className="my-projects">
-                <div id="WV-picture"></div>
+                    <ImageSlider images={WOVImages} />
                 <div className="game-description">
                     <h1>Wars of Vogrora</h1>
                     <p><span id="WOV">W</span>ars of Vogrora is a RPG turn-style game built using vanila JS. Create a character and join in the fight to save your planet from the forces of evil. Buy potions in the store to increase your attack and defense. Click on the work button to earn money in exchange for energy. Click on the eat button to replenish energy by using money.</p>
@@ -127,6 +131,7 @@ export default function Projects(props) {
                     </ul>
                 </div>
             </article>
+            {/* <img src='/images/GH/GH2.png' /> */}
         </div>
     )
 }
