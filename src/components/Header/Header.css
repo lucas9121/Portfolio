@@ -2,28 +2,112 @@
     /* background-color: beige; */
     background: rgb(234 178 39);
     /* background: rgb(85 118 152); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     padding: 0 10px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    /* height: 70px; */
+    transition: 1s;
+}
+
+#banner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* #logo {
+  background: url(../../../public/logo.png);
+  background-repeat: round;
+  height: 100%;
+  width: 13%;
+  max-width: 255px;
+  min-width: 140px;
+}  */
+
+#logo{
+  background: url(../../../public/logo.png);
+  background-size: cover;
+  background-repeat: round;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 14%;
+  background-color: #ffffff82;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  color: #fff;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.Header > nav {
+  position: relative;
+  display: flex;
+  z-index: 1;
 }
   
-.Header > ul {
+/* .Header > ul {
     margin: 0;
     list-style: none;
     display: flex;
     align-items: center;
     height: 100%;
+} */
+
+.Header > nav > ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  transition: 0.25s;
+  transform: translate(100px);
+  opacity: 0;
 }
-  
-#logo {
-    background: url(../../../public/logo.png);
-    background-repeat: round;
-    height: 100%;
-    width: 13%;
-    max-width: 255px;
-    min-width: 140px;
+
+.list{
+  list-style: none;
+}
+
+.list > a {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.list > a:hover{
+  color: rgb(238 186 58);
+}
+
+.sticky{
+  height: 80px;
+}
+
+.sticky > #logo {
+  position: absolute;
+  font-size: 2em;
+  left: 30px;
+  transform: translate(0, -50%);
+  width: 15%;
+  height: 75%;
+}
+
+.sticky > nav > ul {
+  transform: translate(0);
+  opacity: 1;
+  transition-delay: .75s;
 }
   
 .Link {
@@ -37,14 +121,18 @@
 #Linkedin:hover {
     color: cornflowerblue;
 }
+
+
   
 /* /// Toggle //// */
+
 #toggle{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     justify-content: space-around;
+    padding: 0 25px;
 }
   
 .switch {
@@ -107,4 +195,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-  
