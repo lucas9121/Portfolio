@@ -2,7 +2,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import styles from "./App.css"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function App() {
   const [headerBckgd, setHeaderBckgd] = useState('')
@@ -11,6 +11,8 @@ export default function App() {
   const [footerBckgd, setFooterBckgd] = useState('')
   const [appCl, setAppCl] = useState('')
   const [toggle, setToggle] = useState(false)
+  const [sticky, setSticky] = useState(false)
+  const scroll = useRef(null)
 
   useEffect(() => {
     if(toggle){
@@ -28,11 +30,30 @@ export default function App() {
     }
   }, [toggle])
 
+  const handleScroll = (evt) => {
+    const scrollTop = evt.currentTarget.scrollTop
+    console.log('scrollTop')
+    console.log(evt.currentTarget.scrollTop)
+    if(scrollTop > 0){
+      setSticky(true)
+    } else {
+      setSticky(false)
+    }
+  }
+
   return (
-    <main className="App" style={{background: `${appBckgd}`, color: `${appCl}`}}>
-      <Header toggle={toggle} setToggle={setToggle} bckgd={headerBckgd} />
+    <main className="App" style={{background: `${appBckgd}`, color: `${appCl}`}} onScroll={(evt) => {handleScroll(evt)}} >
+      <Header toggle={toggle} setToggle={setToggle} bckgd={headerBckgd} sticky={sticky} />
       <Main bckgd={mainBckgd} />
       <Footer bckgd={footerBckgd} />
+      <h2>Random title</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quod sapiente porro et, tempore cum inventore? Nesciunt at eius, ad nisi deleniti cum nobis repudiandae ullam. Fugiat aut dolor eius?
+        Fugit quis, et quisquam eius natus est minus hic sed veniam magnam illum accusamus harum at! Consectetur minus quidem consequatur reprehenderit, mollitia ipsa inventore est illum provident laboriosam rerum incidunt!
+        Corrupti ipsam, vel accusamus fuga nobis sed illo rem distinctio a facilis commodi est enim, mollitia velit laboriosam veritatis reiciendis quasi odit impedit ipsum facere aperiam cupiditate? Earum, veritatis est!
+        Beatae quos, quod, incidunt facere blanditiis quidem adipisci totam non sed iusto praesentium pariatur sequi eaque omnis sunt aspernatur inventore dignissimos illum officia, perferendis numquam temporibus. Veritatis obcaecati omnis enim?
+        Doloremque praesentium tenetur, vitae repellendus fugit quae commodi culpa distinctio beatae. Esse fugiat unde qui perspiciatis? Nostrum, animi. Possimus illo voluptatum at autem architecto, ea quaerat iste neque omnis consectetur!
+      </p>
     </main>
   )
 }
