@@ -1,13 +1,15 @@
 .App {
   text-align: center;
-  min-height: 100vh;
-  max-height: fit-content;
+  /* min-height: 100vh;
+  max-height: fit-content; */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: rgb(0 0 0 / 78%);
   background: linear-gradient(357deg, #00000091, #1c586ad4);
   /* background: #080808; */
+  overflow: scroll;
 }
 
 .App-logo {
