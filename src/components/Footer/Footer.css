@@ -1,0 +1,42 @@
+.Footer{
+    padding: 10px 0;
+    background: linear-gradient(0deg, rgba(240, 254, 255, 0.8), rgba(240, 254, 255, 0.7), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer > p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.Footer > nav > ul {
+    display: flex;
+}
+
+.Footer > nav > ul > li {
+    list-style: none;
+}
+
+.FooterNight{
+    background: #030c14c7;
+}
+
+.FooterNight #Linkedin {
+    color: white;
+}
+
+.FooterNight .footerLink {
+    color: white;
+}
+  
+#Linkedin:hover {
+    color: cornflowerblue;
+    transition: .25s;
+}
+
+.footerLink:hover {
+    color: rgb(126, 125, 125);
+    transition: .25s;
+}
