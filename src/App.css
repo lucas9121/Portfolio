@@ -1,5 +1,4 @@
 .App {
-  padding: 10px 0;
   text-align: center;
   height: 100vh;
   background: linear-gradient(357deg, #00000091, #1c586ad4);
@@ -9,4 +8,9 @@
 .subDiv {
   height: calc(101vh - 80px);
   overflow: scroll;
+}
+
+.AppNight{
+  background: #080808;
+  color: white;
 }
