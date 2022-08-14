@@ -3,9 +3,8 @@ import "./Header.css"
 
 export default function Headers({toggle, setToggle, bckgd, sticky}) {
     return (
-        <div className={sticky ? "Header sticky" : "Header"} style={{background: `${bckgd}`}}>
-            <img src="https://www.incimages.com/uploaded_files/image/1024x576/software-computer-code-1940x900_35196.jpg" alt="banner" id="banner" />
-            <a href='#' id="logo">Brand</a>
+        <div className={sticky ? "Header sticky" : "Header"}>
+            <a href='#' id="logo"></a>
             <nav>
                 <ul>
                     <li className='list'><a href="#About">About</a></li>
