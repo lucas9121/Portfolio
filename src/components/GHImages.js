@@ -27,11 +27,6 @@ const GHImages = [{
     id: 6,
     src: "/images/GH/GH6.png",
     alt: "Gamehub image 6"
-},
-{
-    id: 7,
-    src: "/images/GH/GH7.png",
-    alt: "Gamehub image 7"
 }
 ]
 
