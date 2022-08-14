@@ -166,12 +166,23 @@
 /* /// Project icons //// */
 #unit3:hover{
     color: #007bff;
+    transition: .25s;
 }
   
 #unit4:hover{
     color: #f2782f;
+    transition: .25s;
 }
   
 #unit1:hover{
     color: red;
+    transition: .25s;
+}
+
+.Link {
+    color: black;
+}
+.Github:hover {
+    color: white;
+    transition: .25s;
 }

@@ -25,7 +25,6 @@
 }
 
 .Header > nav {
-  position: relative;
   display: none;
   z-index: 1;
 }
@@ -54,6 +53,10 @@
   color: rgb(238 186 58);
 }
 
+.list > .night:hover{
+  color: rgb(34 150 243);
+}
+
 .sticky{
   height: 80px;
   align-items: normal;
@@ -75,21 +78,8 @@
   opacity: 1;
   transition-delay: .75s;
 }
-  
-.Link {
-    color: black;
-}
-  
-.Github:hover {
-    color: white;
-}
-  
-#Linkedin:hover {
-    color: cornflowerblue;
-}
 
 
-  
 /* /// Toggle //// */
 
 #toggle{
