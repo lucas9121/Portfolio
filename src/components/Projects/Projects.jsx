@@ -12,7 +12,7 @@ import ImageSlider from '../ImageSlider'
 
 export default function Projects(props) {
     return (
-        <div id="Projects">
+        <div id="ProjectsGrid">
             <article className="my-projects">
                 <ImageSlider images={GHImages} />
                 <div className="game-description">
