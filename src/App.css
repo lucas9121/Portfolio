@@ -3,11 +3,25 @@
   height: 100vh;
   background: linear-gradient(357deg, #00000091, #1c586ad4);
   overflow: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
 }
 
 .subDiv {
   height: calc(101vh - 80px);
   overflow: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.subDiv::-webkit-scrollbar {
+    display: none;
 }
 
 .AppNight{
