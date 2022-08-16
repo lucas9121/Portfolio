@@ -1,0 +1,55 @@
+#AboutMe{
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+/* #About-img {
+    background: url(../../../public/images/A881DD38-7689-4ECB-9DA3-D26DFEB03838_1_105_c.jpeg);
+    height: 47vh;
+    width: 30vw;
+    max-width: 570px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+} */
+
+#About-description {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#About-description::-webkit-scrollbar {
+    display: none;
+}
+
+#About-description > p {
+    font-size: 2rem;
+    margin: 0;
+    text-indent: 2%;
+}
+
+#skills {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+#skills > li {
+    border-right: solid;
+    padding: 0 10px;
+    font-size: larger;
+    font-weight: 800;
+}
+
+#skills > li:nth-of-type(1){
+    border: none;
+    padding: 0;
+}
