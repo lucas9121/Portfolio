@@ -1,9 +1,32 @@
-#ProjectsGrid {
+.ProjectsGrid {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    width: 90%;
+    height: calc(100vh - 230px);
+    overflow-y : scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: 5px;
+}
+
+.ProjectsGrid::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ProjectsGrid::-webkit-scrollbar-track{
+    display: none;
+}
+
+.ProjectsGrid::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 10px;
+}
+
+.nightMode::-webkit-scrollbar-thumb{
+    background: gainsboro;
+    border-radius: 10px;
 }
   
 .my-projects{

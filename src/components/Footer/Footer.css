@@ -1,5 +1,4 @@
 .Footer{
-    padding: 10px 0;
     background: linear-gradient(0deg, rgba(240, 254, 255, 0.8), rgba(240, 254, 255, 0.7), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6));
     display: flex;
     align-items: center;
@@ -13,6 +12,7 @@
 
 .Footer > nav > ul {
     display: flex;
+    margin: .5em;
 }
 
 .Footer > nav > ul > li {
