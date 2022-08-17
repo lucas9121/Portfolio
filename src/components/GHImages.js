@@ -15,18 +15,18 @@ const GHImages = [{
 },
 {
     id: 4,
-    src: "/images/GH/GH4.png",
-    alt: "Gamehub image 4"
+    src: "/images/GH/GH8.png",
+    alt: "Gamehub image 8"
 },
 {
     id: 5,
-    src: "/images/GH/GH5.png",
+    src: "/images/GH/GH9.png",
     alt: "Gamehub image 5"
 },
 {
     id: 6,
-    src: "/images/GH/GH6.png",
-    alt: "Gamehub image 6"
+    src: "/images/GH/GH4.png",
+    alt: "Gamehub image 4"
 }
 ]
 
