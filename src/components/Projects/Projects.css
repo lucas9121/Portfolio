@@ -37,13 +37,14 @@
     flex: 2;
     border-left: none;
     border-radius: 0 0 10px 10px;
-    color: black;
+    /* color: black; */
     display: flex;
     flex-direction: column;
     text-align: center;
     min-height: 500px;
     width: 500px;
     background: gainsboro;
+    background: #fffcfc2b;
     overflow: auto;
     padding: 15px 15px 0 15px;
     -ms-overflow-style: none;
@@ -182,7 +183,15 @@
 .Link {
     color: black;
 }
-.Github:hover {
+.Link:hover {
     color: white;
     transition: .25s;
+}
+
+.LinkNight{
+    color: gainsboro;
+}
+
+.LinkNight:hover{
+    color: black;
 }

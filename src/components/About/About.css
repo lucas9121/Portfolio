@@ -21,7 +21,6 @@
     scrollbar-width: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #About-description::-webkit-scrollbar {
@@ -29,22 +28,28 @@
 }
 
 #About-description > p {
+    text-align: start;
     font-size: 2rem;
     margin: 0;
     text-indent: 2%;
 }
 
 #skills {
-    height: fit-content;
+    /* height: fit-content; */
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     list-style: none;
-    padding: 15px 0;
+    padding: 45px 0;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    gap: 10px;
 }
 
 #skills > li {
     border-right: solid;
     padding: 0 10px;
+    padding-right: 10px;
     font-size: larger;
     font-weight: 800;
 }
@@ -52,4 +57,5 @@
 #skills > li:nth-of-type(1){
     border: none;
     padding: 0;
+    text-decoration: underline;
 }
