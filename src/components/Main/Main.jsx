@@ -8,7 +8,7 @@ export default function Main({toggle}) {
             <h2 id="About">About Me</h2>
             <About />
             <h2 id="Projects">My Projects</h2>
-            <Projects />
+            <Projects toggle={toggle} />
             </div>
     )
 }
