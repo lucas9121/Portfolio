@@ -12,7 +12,7 @@ import ImageSlider from '../ImageSlider'
 
 export default function Projects(props) {
     return (
-        <div id="ProjectsGrid">
+        <div className={props.toggle ? "ProjectsGrid nightMode" : "ProjectsGrid"}>
             <article className="my-projects">
                 <ImageSlider images={GHImages} />
                 <div className="game-description">
