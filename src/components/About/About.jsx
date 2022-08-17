@@ -7,7 +7,7 @@ export default function About(){
             <div>
                 <div id="About-description">
                     <p>I'm a software engineer with background experience in both the criminal justice, and education field. I admire the problem-solving aspect, and versatility to create virtually anything, that the software engineer field offers. I enjoy building web apps and content that has a lot of functionality to it. </p>
-                    <p>During my free time I enjoy playing the piano or playing video games online and volunteering.</p>
+                    <p>During my free time I enjoy playing the piano or playing video games online and volunteering. </p>
                     <ul id="skills">
                         <li>Skills: </li>
                         <li>HTML</li>
