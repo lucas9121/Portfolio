@@ -2,6 +2,7 @@
   text-align: center;
   height: 100vh;
   background: linear-gradient(357deg, #00000091, #1c586ad4);
+  background: deepskyblue;
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -15,6 +16,7 @@
 .subDiv {
   height: calc(101vh - 80px);
   background: linear-gradient(0deg, rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.8), rgb(240 254 255 / 70%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(223 203 157 / 70%), rgb(234 178 39));
+  background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8);
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -25,6 +27,20 @@
     display: none;
 }
 
+.Sun{
+  opacity: 1;
+	box-shadow: 0px 0px 15px 3px yellow;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 15vh;
+	left: 93vw;
+	animation: sundown 5s ease infinite;
+	border-radius: 50%;
+	background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+  z-index: 1;
+}
+
 .subDivNight {
   background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129));
 }
@@ -32,4 +48,17 @@
 .AppNight{
   background: #080808;
   color: white;
+}
+
+@keyframes sundown {
+  from {
+    top: 15vh
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    top: 101vh;
+    opacity: 0;
+  }
 }

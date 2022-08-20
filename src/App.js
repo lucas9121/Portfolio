@@ -23,6 +23,7 @@ export default function App() {
     <main className={toggle ? "App AppNight" : "App"} onScroll={(evt) => {handleScroll(evt)}}>
         <Header toggle={toggle} setToggle={setToggle} sticky={sticky} />
         <div className={toggle ? "subDiv subDivNight" : "subDiv"}>
+          <div className="Sun"></div>
           <Main toggle={toggle} />
           <Footer toggle={toggle} />
         </div>
