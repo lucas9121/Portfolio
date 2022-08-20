@@ -1,4 +1,4 @@
-import {BsLinkedin, BsGithub, BsSunFill, BsMoonFill} from 'react-icons/bs'
+import { BsSunFill, BsMoonFill} from 'react-icons/bs'
 import "./Header.css"
 
 export default function Headers({toggle, setToggle, sticky}) {
