@@ -10,6 +10,7 @@
     background: url(../../../public/images/software-computer-code-1940x900_35196.jpeg);
     background-size: cover;
     background-repeat: round;
+    z-index: 10;
 }
 
 #logo{
