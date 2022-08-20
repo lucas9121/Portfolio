@@ -1,7 +1,10 @@
 .Main{
+    position: relative;
+    z-index: 2;
     max-width: 1600px;
     margin: 0 auto;
     padding-top: 20px;
+    background: #ffffff14;
     /* background: linear-gradient(0deg, rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.8), rgb(240 254 255 / 70%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(223 203 157 / 70%), rgb(234 178 39)); */
 }
   
