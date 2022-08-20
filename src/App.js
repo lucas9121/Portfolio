@@ -24,6 +24,7 @@ export default function App() {
         <Header toggle={toggle} setToggle={setToggle} sticky={sticky} />
         <div className={toggle ? "subDiv subDivNight" : "subDiv"}>
           <div className="Sun"></div>
+          <div className="Moon"></div>
           <Main toggle={toggle} />
           <Footer toggle={toggle} />
         </div>
