@@ -29,26 +29,55 @@
 
 .Sun{
   opacity: 1;
-	box-shadow: 0px 0px 15px 3px yellow;
+	box-shadow: 0px 0px 15px 3px #ffd200c4;
 	width: 100px;
 	height: 100px;
 	position: absolute;
 	top: 15vh;
 	left: 93vw;
-	animation: sundown 5s ease infinite;
 	border-radius: 50%;
-	background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+	background: radial-gradient(circle, #ffd200 95%, #f7971e);
+  z-index: 1;
+  animation: sunrise 5s ease forwards;
+}
+
+.Moon{
+  opacity: 1;
+  box-shadow: 0px 0px 15px 3px #f5f3ce;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 15vh;
+  left: 2vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f5f5ec, #f5fece);
   z-index: 1;
 }
 
-.subDivNight {
-  background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129));
+.subDiv > .Moon {
+  animation: moondown 5s ease forwards;
 }
 
 .AppNight{
   background: #080808;
   color: white;
+  background: #251d18;
 }
+
+.subDivNight {
+  background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129));
+  background: radial-gradient(at 4% 15%, #f5f3d742, #0c2293, #000e5e, #000834, #000000cf);
+}
+
+.subDivNight > .Sun{
+  	animation: sundown 5s ease forwards;
+}
+
+.subDivNight > .Moon {
+  animation: moonrise 5s ease forwards;
+}
+
+
 
 @keyframes sundown {
   from {
@@ -58,7 +87,40 @@
     opacity: 1;
   }
   to {
-    top: 101vh;
+    top: 99vh;
+    opacity: 0;
+  }
+}
+
+@keyframes sunrise {
+  from {
+    top: 99vh;
+    opacity: 1;
+  }
+  to {
+    top: 15vh;
+  }
+}
+
+@keyframes moonrise {
+  from {
+    top: 99vh;
+    opacity: 1;
+  }
+  to {
+    top: 15vh;
+  }
+}
+
+@keyframes moondown {
+  from {
+    top: 15vh
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    top: 99vh;
     opacity: 0;
   }
 }
