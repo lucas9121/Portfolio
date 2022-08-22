@@ -1,7 +1,7 @@
 import { BsSunFill, BsMoonFill} from 'react-icons/bs'
 import "./Header.css"
 
-export default function Headers({toggle, setToggle, sticky}) {
+export default function Headers({toggle, setToggle, sticky, setSticky}) {
     return (
         <div className={sticky ? "Header sticky" : "Header"}>
             <a href='#' id="logo"></a>

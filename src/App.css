@@ -15,8 +15,9 @@
 
 .subDiv {
   height: calc(101vh - 80px);
-  background: linear-gradient(0deg, rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.8), rgb(240 254 255 / 70%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(223 203 157 / 70%), rgb(234 178 39));
-  background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8);
+  /* background: linear-gradient(0deg, rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.8), rgb(240 254 255 / 70%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(223 203 157 / 70%), rgb(234 178 39));
+  background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8); */
+  animation: sunriseSky 4s ease forwards;
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -65,8 +66,9 @@
 }
 
 .subDivNight {
-  background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129));
-  background: radial-gradient(at 4% 15%, #f5f3d742, #0c2293, #000e5e, #000834, #000000cf);
+  /* background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129));
+  background: radial-gradient(at 4% 15%, #ffffff61, #0c2293, #000e5e, #000834, #000000cf); */
+  animation: moonriseSky 4s ease forwards;
 }
 
 .subDivNight > .Sun{
@@ -122,5 +124,53 @@
   to {
     top: 99vh;
     opacity: 0;
+  }
+}
+
+@keyframes sunriseSky {
+  from {
+    background: radial-gradient(at 4% 15%, #ffffff61, #0c2293, #000e5e, #000834, #000000cf);
+  }
+  5% {
+    background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834);
+  }
+  25%{
+    background: radial-gradient(at 95% 65%, #ffd200e0, #ffd20096, deepskyblue, #ff206e94, #0c2293, #000e5e);
+  }
+  50% {
+    background: radial-gradient(at 95% 45%, #ffd200e0, #ffd20096, deepskyblue, transparent, #ff206e94, #0c2293);
+  }
+  75% {
+    background: radial-gradient(at 95% 25%, #ffd200e0, #ffd20096, deepskyblue, transparent, #ff206e94)
+  }
+  to{
+    background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8);
+  }
+}
+
+@keyframes moonriseSky{
+  from {
+    background: radial-gradient(at 95% 15%, #ffd20096, #00bfff, #00bfff, #a6a6a6)
+  }
+  25% {
+    background: radial-gradient(at 95% 25%, #ffd200e0, #ffd20096, deepskyblue, transparent, #ff206e94)
+  }
+  50% {
+    background: radial-gradient(at 95% 45%, #ffd200e0, #ffd20096, deepskyblue, transparent, #ff206e94, #0c2293);
+  }
+  75%{
+    background: radial-gradient(at 95% 65%, #ffd200e0, #ffd20096, deepskyblue, #ff206e94, #0c2293, #000e5e);
+  }
+  90% {
+    background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834);
+  }
+  /* 10% {
+    background: radial-gradient(at 4% 100%,#000834, #ff206e94, #ff206e94, #ffd20096);
+  }
+  60% {
+    background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834);
+  } */
+  to {
+    background: radial-gradient(at 4% 15%, #ffffff61, #0c2293, #000e5e, #000834, #000000cf);
   }
 }

@@ -2,7 +2,7 @@ import "./App.css"
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [toggle, setToggle] = useState(false)
