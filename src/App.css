@@ -123,6 +123,8 @@
   background: radial-gradient(at 4% 15%, #ffffff61, #0c2293, #000e5e, #000834, #000000cf); */
   /* transition: --first 5s, --second 5s, --third 5s, --fourth 5s, --fifth 5s, --sixth 5s, --horizontoal 5s, --vertical 5s; */
   animation: moonriseSky 6s ease forwards;
+  -moz-background: rgb(0, 53, 110);
+  transition: -moz-background 4s;
   /* --horizontal: 4%;
   --first: #ffffff61;
   --second: #0c2293;
@@ -333,7 +335,6 @@
     --vertical: 15%;
   }
   to {
-    -moz-background: rgb(0, 62, 129);
     --horizontal: 4%;
     --vertical: 15%;
     --first: #ffffff61;
