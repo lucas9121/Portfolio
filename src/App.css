@@ -56,7 +56,7 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  transition: background 4s;
+  transition: background 4s, color 4s;
 }
 
 .App::-webkit-scrollbar {
@@ -333,8 +333,9 @@
     --vertical: 15%;
   }
   to {
-      --horizontal: 4%;
-      --vertical: 15%;
+    -moz-background: rgb(0, 62, 129);
+    --horizontal: 4%;
+    --vertical: 15%;
     --first: #ffffff61;
     --second: #0c2293;
     --third: #0c2293;
