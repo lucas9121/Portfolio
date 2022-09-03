@@ -69,6 +69,7 @@
   background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8);
   /* transition: --first 1s, --second 1s, --third 1s, --fourth 1s, --fifth 1s, --sixth 1s, --horizontoal 1s, --vertical 1s; */
   /* transition-delay: var(--horizontal) 5s; */
+  -moz-background: transparent;
   background: radial-gradient(at var(--horizontal) var(--vertical), var(--first), var(--second), var(--third), var(--fourth), var(--fifth), var(--sixth));
   animation: sunriseSky 5s ease forwards;
   overflow: scroll;
@@ -200,8 +201,22 @@
     --second: #0c2293;
     --third: #0c2293;
     --fourth: #000e5e;
-    --fifth: #000834;
-    --sixth: #000000cf;
+    --fifth: #000e5e;
+    --sixth: #000e5e;
+  }
+  2%{
+    --horizontal: 4%;
+    --vertical: 15%;
+    --first: #0c2293;
+    --second: #0c2293;
+    --third: #0c2293;
+    --fourth: #0c2293;
+    --fifth: #0c2293;
+    --sixth: #0c2293;
+  }
+  3%{
+    --horizontal: 95%;
+    --vertical: 110%;
   }
   5% {
     /* background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834); */
@@ -317,12 +332,18 @@
     /* background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834); */
     --horizontal: 95%;
     --vertical: 110%;
-    --first: #0c2293;
+    /* --first: #0c2293;
     --second: #0c2293;
     --third: #0c2293;
     --fourth: #000e5e;
     --fifth: #000834;
-    --sixth: #000000cf;
+    --sixth: #000000cf; */
+    --sixth: #0c2293;
+    --fifth: #0c2293;
+    --fourth: #0c2293;
+    --third: #0c2293;
+    --second: #0c2293;
+    --first: #0c2293;
   }
   /* 82%{
     --horizontal: 4%;
@@ -331,9 +352,33 @@
   } */
   85%{
     --horizontal: 4%;
+    --vertical: 15%;
+    --first: #0c2293;
+    --second: #0c2293;
+    --third: #0c2293;
+    --fourth: #0c2293;
+    --fifth: #0c2293;
+    --sixth: #0c2293;
   }
   90%{
+    --horizontal: 4%;
     --vertical: 15%;
+    --first: #0c2293;
+    --second: #0c2293;
+    --third: #0c2293;
+    --fourth: #000e5e;
+    --fifth: #000e5e;
+    --sixth: #000e5e;
+  }
+  95%{
+    --horizontal: 4%;
+    --vertical: 15%;
+    --first: #0c2293;
+    --second: #0c2293;
+    --third: #0c2293;
+    --fourth: #000e5e;
+    --fifth: #000834;
+    --sixth: #000000cf;
   }
   to {
     --horizontal: 4%;
