@@ -119,6 +119,7 @@
 }
 
 .dayMode > .Moon {
+  opacity: 1;
   animation: moondown 5s ease forwards;
 }
 
