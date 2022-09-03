@@ -21,8 +21,19 @@
   height: 14%;
   background-color: #ffffff82;
   color: #fff;
-  text-decoration: none;
+  border: none;
   z-index: 1;
+  cursor: pointer;
+}
+
+#arrow{
+  display: inline-block;
+  position: absolute;
+  bottom: 35px;
+  color: #ffffff;
+  font-size: 50px;
+  cursor: pointer;
+  animation: downarrow 2s infinite;
 }
 
 .Header > nav {
@@ -69,6 +80,10 @@
   margin-top: 10px;
   width: 15%;
   height: 75%;
+}
+
+.sticky > #arrow {
+  display: none;
 }
 
 .sticky > nav {
@@ -151,4 +166,16 @@ input:checked + .slider:before {
   
 .slider.round:before {
   border-radius: 50%;
+}
+
+@keyframes downarrow{
+  from{
+    bottom: 35px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  to{
+    bottom: 35px;
+  }
 }
