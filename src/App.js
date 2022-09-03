@@ -22,6 +22,11 @@ export default function App() {
     }
   }, [toggle, mode])
 
+  useEffect(() => {
+    if(!sticky) document.querySelector(".subDiv").scrollTo(0, 0); document.querySelector(".ProjectsGrid").scrollTo(0, 0)
+  }, [sticky])
+
+
   const handleScroll = (evt) => {
     const scrollTop = evt.currentTarget.scrollTop
     if(scrollTop > 0){
@@ -35,7 +40,7 @@ export default function App() {
 
   return (
     <main className={toggle ? "App AppNight" : "App"} onScroll={(evt) => {handleScroll(evt)}}>
-        <Header toggle={toggle} setToggle={setToggle} sticky={sticky} setMode={setMode} mode={mode} />
+        <Header toggle={toggle} setToggle={setToggle} sticky={sticky} setSticky={setSticky} setMode={setMode} mode={mode} />
         <div className={toggle ? "subDiv subDivNight" : "subDiv"}>
           <div className="Sun"></div>
           <div className="Moon"></div>
