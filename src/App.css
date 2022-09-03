@@ -50,8 +50,8 @@
 .App {
   text-align: center;
   height: 100vh;
-  background: linear-gradient(357deg, #00000091, #1c586ad4);
   background: deepskyblue;
+  background: radial-gradient(at 95% 15%, deepskyblue, deepskyblue, deepskyblue, deepskyblue, deepskyblue, #a6a6a6);
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -65,11 +65,14 @@
 
 .subDiv {
   height: calc(101vh - 80px);
-  background: linear-gradient(0deg, rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.8), rgb(240 254 255 / 70%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(240 254 255 / 60%), rgb(223 203 157 / 70%), rgb(234 178 39));
-  background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8);
-  /* transition: --first 1s, --second 1s, --third 1s, --fourth 1s, --fifth 1s, --sixth 1s, --horizontoal 1s, --vertical 1s; */
-  /* transition-delay: var(--horizontal) 5s; */
-  -moz-background: transparent;
+  --horizontal: 95%;
+  --vertical: 15%;
+  --first: transparent;
+  --second: transparent;
+  --third: transparent;
+  --fourth: transparent;
+  --fifth: transparent;
+  --sixth: transparent;
   background: radial-gradient(at var(--horizontal) var(--vertical), var(--first), var(--second), var(--third), var(--fourth), var(--fifth), var(--sixth));
   animation: sunriseSky 5s ease forwards;
   overflow: scroll;
@@ -114,26 +117,22 @@
 }
 
 .AppNight{
-  background: #080808;
   color: white;
-  background: #251d18;
+  background: #000e5e;
+  background: radial-gradient(at 4% 15%, #0c2293, #0c2293, #0c2293, #000e5e, #000834, #000000ff)
 }
 
 .subDivNight {
-  /* background: linear-gradient(0deg, rgb(0 3 5 / 60%), rgb(0 30 57 / 80%), rgb(1 18 42 / 70%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 60%), rgb(1 18 42 / 70%), rgb(0 62 129));
-  background: radial-gradient(at 4% 15%, #ffffff61, #0c2293, #000e5e, #000834, #000000cf); */
-  /* transition: --first 5s, --second 5s, --third 5s, --fourth 5s, --fifth 5s, --sixth 5s, --horizontoal 5s, --vertical 5s; */
+  --horizontal: 4%;
+  --vertical: 15%;
+  --first: transparent;
+  --second: transparent;
+  --third: transparent;
+  --fourth: transparent;
+  --fifth: transparent;
+  --sixth: transparent;
   background: radial-gradient(at var(--horizontal) var(--vertical), var(--first), var(--second), var(--third), var(--fourth), var(--fifth), var(--sixth));
-  -webkit-background: #000f20;
   animation: moonriseSky 6s ease forwards;
-  transition: -webkit-background 4s;
-  /* --horizontal: 4%;
-  --first: #ffffff61;
-  --second: #0c2293;
-  --third: #0c2293;
-  --fourth: #000e5e;
-  --fifth: #000834;
-  --sixth: #000000cf; */
 }
 
 .subDivNight > .Sun{
@@ -194,7 +193,6 @@
 
 @keyframes sunriseSky {
   from {
-    /* background: radial-gradient(at 4% 15%, #ffffff61, #0c2293, #000e5e, #000834, #000000cf); */
     --horizontal: 4%;
     --vertical: 15%;
     --first: #0c2293;
@@ -219,7 +217,6 @@
     --vertical: 110%;
   }
   5% {
-    /* background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834); */
     --horizontal: 95%;
     --vertical: 110%;
     --first: #ffd200e0;
@@ -230,7 +227,6 @@
     --sixth: #000834;
   }
   25%{
-    /* background: radial-gradient(at 95% 65%, #ffd200e0, #ffd20096, deepskyblue, #ff206e94, #0c2293, #000e5e); */
     --first: #ffd200e0;
     --second: #ffd20096;
     --third: #00bfff;
@@ -239,7 +235,6 @@
     --sixth: #000e5e;
   }
   50% {
-    /* background: radial-gradient(at 95% 45%, #ffd200e0, #ffd20096, deepskyblue, transparent, #ff206e94, #0c2293); */
     --first: #ffd200e0;
     --second: #ffd20096;
     --third: #00bfff;
@@ -248,7 +243,6 @@
     --sixth: #0c2293;
   }
   75% {
-    /* background: radial-gradient(at 95% 25%, #ffd200e0, #ffd20096, deepskyblue, transparent, #ff206e94); */
     --first: #ffd200e0;
     --second: #ffd20096;
     --third: #00bfff;
@@ -262,10 +256,9 @@
     --third: #00bfff;
     --fourth: #00000000;
     --fifth: #00000000;
-    --sixth: #a6a6a6;
+    --sixth: #00000000;
   }
   to{
-    /* background: radial-gradient(at 95% 15%, #ffd20096, #ffd2001f, #f0f8ff4f, #f0f8ffa8); */
     --horizontal: 95%;
     --vertical: 15%;
     --first: #ffd20096;
@@ -312,11 +305,7 @@
     --fifth: #0c2293;
     --sixth: #000e5e;
   }
-  /* 55%{
-    --vertical: 87.5%;
-  } */
   75% {
-    /* background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834); */
     --horizontal: 95%;
     --vertical: 110%;
     --first: #ffd200e0;
@@ -329,15 +318,8 @@
     --sixth: #000834; */
   }
   80% {
-    /* background: radial-gradient(at 95% 110%, #ffd200e0, #ff206e94, #0c2293, #0c2293, #000e5e, #000834); */
     --horizontal: 95%;
     --vertical: 110%;
-    /* --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #000e5e;
-    --fifth: #000834;
-    --sixth: #000000cf; */
     --sixth: #0c2293;
     --fifth: #0c2293;
     --fourth: #0c2293;
@@ -345,11 +327,6 @@
     --second: #0c2293;
     --first: #0c2293;
   }
-  /* 82%{
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #0c2293;
-  } */
   85%{
     --horizontal: 4%;
     --vertical: 15%;
@@ -390,14 +367,4 @@
     --fifth: #000834;
     --sixth: #000000cf;
   }
-  /* to{
-    --horizontal: 4%;
-    --vertical: 110%;
-    --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #000e5e;
-    --fifth: #000834;
-    --sixth: #000000cf;
-  } */
 }
