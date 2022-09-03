@@ -1,10 +1,11 @@
-import { BsSunFill, BsMoonFill} from 'react-icons/bs'
+import { BsSunFill, BsMoonFill, BsArrowDownCircle} from 'react-icons/bs'
 import "./Header.css"
 
 export default function Headers({toggle, setToggle, sticky, setSticky}) {
     return (
         <div className={sticky ? "Header sticky" : "Header"}>
-            <a href='#' id="logo"></a>
+            <button id="logo" onClick={() => {setSticky(!sticky)}}></button>
+            <BsArrowDownCircle id='arrow' onClick={() => {setSticky(!sticky)}} />
             <nav>
                 <ul>
                     <li className='list'><a className={toggle ? 'night' : ""} href="#About">About</a></li>
