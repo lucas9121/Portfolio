@@ -74,11 +74,14 @@
   --fifth: transparent;
   --sixth: transparent;
   background: radial-gradient(at var(--horizontal) var(--vertical), var(--first), var(--second), var(--third), var(--fourth), var(--fifth), var(--sixth));
-  animation: sunriseSky 5s ease forwards;
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.dayMode{
+  animation: sunriseSky 5s ease forwards;
 }
 
 .subDiv::-webkit-scrollbar {
@@ -96,11 +99,18 @@
 	border-radius: 50%;
 	background: radial-gradient(circle, #ffd200 95%, #f7971e);
   z-index: 1;
+}
+
+.dayMode > .Sun {
   animation: sunrise 5s ease forwards;
 }
 
+/* .sunRiseAnimation{
+  animation: sunrise 5s ease forwards;
+} */
+
 .Moon{
-  opacity: 1;
+  opacity: 0;
   box-shadow: 0px 0px 15px 3px #f5f3ce;
   width: 100px;
   height: 100px;
@@ -112,7 +122,11 @@
   z-index: 1;
 }
 
-.subDiv > .Moon {
+/* .moonDownAnimation{
+  animation: moondown 5s ease forwards;
+} */
+
+.dayMode > .Moon {
   animation: moondown 5s ease forwards;
 }
 
@@ -175,6 +189,7 @@
   }
   to {
     top: 15vh;
+    opacity: 1;
   }
 }
 
