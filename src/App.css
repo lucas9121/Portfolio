@@ -93,9 +93,12 @@
 	box-shadow: 0px 0px 15px 3px #ffd200c4;
 	width: 100px;
 	height: 100px;
+  width: clamp(22px, 15vw, 100px);
+  height: clamp(22px, 15vw, 100px);
 	position: absolute;
 	top: 15vh;
-	left: 93vw;
+	/* left: 93vw; */
+  right: 2vw;
 	border-radius: 50%;
 	background: radial-gradient(circle, #ffd200 95%, #f7971e);
   z-index: 1;
@@ -110,6 +113,8 @@
   box-shadow: 0px 0px 15px 3px #f5f3ce;
   width: 100px;
   height: 100px;
+  width: clamp(22px, 15vw, 100px);
+  height: clamp(22px, 15vw, 100px);
   position: absolute;
   top: 15vh;
   left: 2vw;

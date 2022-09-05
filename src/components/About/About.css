@@ -4,6 +4,7 @@
 
 #About > h2 {
     font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
     padding-left: 5%;
     margin-top: 0;
 }
@@ -17,6 +18,8 @@
 #About-img {
     height: 500px;
     width: 500px;
+    height: clamp(200px, 50vw, 500px);
+    width: clamp(200px, 50vw, 500px);
     object-fit: cover;
     border-radius: 50%;
     background-size: cover;
@@ -58,6 +61,7 @@
 #About-description > div > p {
     text-align: start;
     font-size: 2rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
     margin: 0;
     text-indent: 2%;
 }
@@ -67,6 +71,7 @@
     align-items: baseline;
     padding: 45px 0;
     font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 800;
     gap: 10px;
 }
@@ -82,4 +87,16 @@
     border-right: solid;
     padding: 0 10px;
     padding-right: 10px;
+}
+
+
+@media (max-width: 1250px){
+  #AboutMe{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  #skills{
+    padding: 0;
+  }
 }
