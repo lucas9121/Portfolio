@@ -10,6 +10,7 @@
   
 .Main > h2 {
     font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
     padding-left: 5%;
     margin-top: 0;
 }
