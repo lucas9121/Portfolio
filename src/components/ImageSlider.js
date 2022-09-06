@@ -20,7 +20,7 @@ export default function ImageSlider({images}) {
                 {images.map((item) => {
                     return(
                         <div key={item.id}>
-                            <img src={item.src} alt={item.alt} style={{height: '400px', width: '530px'}}/>
+                            <img src={item.src} alt={item.alt}/>
                         </div>
                     )
                 })}
