@@ -1,7 +1,6 @@
 .ProjectsGrid {
     margin: 0 auto;
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px 100px;
     align-items: center;
@@ -36,17 +35,12 @@
     flex-direction: column;
     margin: 0 auto;
     padding: 2% 0;
-    height: 910px;
-}
-  
-.my-projects > div {
-    max-height: 500px;
-    max-width: 600px;
+    height: clamp(850px, 78vh, 950px);
 }
   
 .imgslider{
-    height: 400px;
-    width: 530px;
+    height: clamp(200px, 34vh, 400px);
+    width: clamp(485px, 124vw, 530px);
     border-radius: 10px 10px 0 0;
 }
   
@@ -57,6 +51,12 @@
 .slick-slider > button {
     display: none !important;
 }
+
+.slick-slide img{
+    height: clamp(200px, 34vh, 400px) !important;
+    width: clamp(360px, 27vw, 530px) !important;
+    border-radius: 10px 10px 0 0;
+}
   
 .game-description{
     flex: 2;
@@ -65,8 +65,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 500px;
-    width: 500px;
+    height: clamp(200px, 33vh, 500px);
+    width: clamp(330px, 27vw, 500px);
     background: gainsboro;
     background: #fffcfc2b;
     overflow: auto;
@@ -80,13 +80,13 @@
 }
   
 .game-description > h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     margin-bottom: 0;
     margin-top: 5px;
 }
   
 .game-description > p{
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     margin-bottom: 0;
     margin-top: 5px;
     padding: 0 1%;
