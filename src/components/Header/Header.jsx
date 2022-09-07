@@ -10,9 +10,9 @@ export default function Headers({toggle, setToggle, sticky, setSticky}) {
         <div className={sticky ? "Header sticky" : "Header"}>
             <button id="logo" onClick={() => {setSticky(!sticky)}}></button>
             <BsArrowDownCircle id='arrow' onClick={() => {setSticky(!sticky)}} />
-            <BiMenu className='Hamburger' onClick={() => {setShow(!show)}} />
-            <nav className={show ? "navigation" : ""}>
-                <ul>
+            <nav>
+                <BiMenu className='hamburger' onClick={() => {setShow(!show)}} />
+                <ul className={show ? "menu" : ""}>
                     <li className='list'><a className={toggle ? 'night' : ""} href="#About">About</a></li>
                     <li className='list'><a className={toggle ? 'night' : ""} href="#Projects">Projects</a></li>
                     <li className='list'><a className={toggle ? 'night' : ""} href="mailto:lucas2carlos@gmail.com" target="_blank">Contact me</a></li>
