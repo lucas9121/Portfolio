@@ -96,8 +96,16 @@
     align-items: center;
     padding: 0;
   }
+  #About-description > div > p{
+    text-align: center;
+  }
   #skills{
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #skills > ul{
+    justify-content: center;
+    margin: 0;
   }
 }
 
