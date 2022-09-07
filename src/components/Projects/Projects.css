@@ -36,11 +36,12 @@
     margin: 0 auto;
     padding: 2% 0;
     height: clamp(850px, 78vh, 950px);
+    width: clamp(358px, 61vw, 500px);
 }
   
 .imgslider{
-    height: clamp(200px, 34vh, 400px);
-    width: clamp(485px, 124vw, 530px);
+    height: clamp(200px, 50vh, 400px);
+    width: clamp(358px, 61vw, 530px);
     border-radius: 10px 10px 0 0;
 }
   
@@ -53,8 +54,8 @@
 }
 
 .slick-slide img{
-    height: clamp(200px, 34vh, 400px) !important;
-    width: clamp(360px, 27vw, 530px) !important;
+    height: clamp(200px, 50vh, 400px) !important;
+    width: clamp(360px, 61vw, 530px) !important;
     border-radius: 10px 10px 0 0;
 }
   
@@ -66,7 +67,7 @@
     flex-direction: column;
     text-align: center;
     height: clamp(200px, 33vh, 500px);
-    width: clamp(330px, 27vw, 500px);
+    width: clamp(330px, 61vw, 500px);
     background: gainsboro;
     background: #fffcfc2b;
     overflow: auto;
@@ -125,6 +126,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 20px 0 5px 0;
 }
@@ -218,4 +220,22 @@
 
 .LinkNight:hover{
     color: black;
+}
+
+/* @media (min-width: 768px){
+    .my-projects{
+        margin: 0 auto;
+    }
+} */
+
+@media (max-width: 539px){
+    .my-projects{
+        margin: 0 15px 0 15px;
+    }
+}
+
+@media (max-width: 360px){
+    .my-projects{
+        margin: 0;
+    }
 }
