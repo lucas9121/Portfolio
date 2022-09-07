@@ -90,6 +90,15 @@
   display: flex;
 }
 
+.sticky > nav > .hamburger {
+  height: 60px;
+  width: 60px;
+  color: white;
+  cursor: pointer;
+  margin: auto 0;
+  display: none;
+}
+
 .sticky > nav > ul {
   opacity: 1;
   transition-delay: .75s;
@@ -177,5 +186,29 @@ input:checked + .slider:before {
   }
   to{
     bottom: 35px;
+  }
+}
+
+@media (max-width: 1250px){
+  .sticky  #logo {
+    width: 50%;
+  }
+
+  .sticky > nav {
+    position: relative;
+  }
+
+  .sticky > nav > .hamburger {
+    display: block;
+  }
+
+  .sticky > nav > ul {
+    display: none;
+  }
+
+  .sticky > nav > .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
   }
 }
