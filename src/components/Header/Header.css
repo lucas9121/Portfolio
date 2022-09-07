@@ -196,6 +196,8 @@ input:checked + .slider:before {
 
   .sticky > nav {
     position: relative;
+    background: #000000cc;
+    padding: 0 20px;
   }
 
   .sticky > nav > .hamburger {
@@ -208,7 +210,31 @@ input:checked + .slider:before {
 
   .sticky > nav > .menu {
     position: absolute;
+    top: 70px;
+    right: 0;
     display: flex;
     flex-direction: column;
+    padding: 0 7px;
+    background: #000000cc;
+  }
+
+  .list > a {
+    padding: 10px 5px;
+  }
+
+  #toggle{
+    flex-direction: row;
+    padding: 0 0 10px 0;
+    gap: 10px;
+  }
+
+  .switch {
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1250px) {
+  .sticky  #logo {
+    width: 40%;
   }
 }
