@@ -37,20 +37,12 @@
     overflow-y: auto;
     overflow-x: hidden;
     -ms-overflow-style: none;
-    scrollbar-width: 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 #About-description > div::-webkit-scrollbar {
-    width: 5px;
-}
-
-#About-description > div::-webkit-scrollbar-track{
     display: none;
-}
-
-#About-description > div::-webkit-scrollbar-thumb{
-    background: black;
-    border-radius: 10px;
 }
 
 #About-description > .nightMode::-webkit-scrollbar-thumb{
