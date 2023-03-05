@@ -228,6 +228,12 @@
     }
 } */
 
+@media (max-width: 768px){
+    .ProjectsGrid{
+        height: 100%;
+    }
+}
+
 @media (max-width: 539px){
     .my-projects{
         margin: 0 15px 0 15px;
