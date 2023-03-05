@@ -8,7 +8,7 @@ export default function Headers({toggle, setToggle, sticky, setSticky}) {
 
     return (
         <div className={sticky ? "Header sticky" : "Header"}>
-            <button id="logo" onClick={() => {setSticky(!sticky)}}></button>
+            <button id="logo" onClick={() => {setSticky(!sticky); setShow(false)}}></button>
             <BsArrowDownCircle id='arrow' onClick={() => {setSticky(!sticky)}} />
             <nav>
                 <BiMenu className='hamburger' onClick={() => {setShow(!show)}} />
