@@ -235,6 +235,12 @@ input:checked + .slider:before {
 
 @media (min-width: 768px) and (max-width: 1250px) {
   .sticky  #logo {
-    width: 40%;
+    width: 25%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .Header {
+    padding: 0;
   }
 }
