@@ -89,7 +89,7 @@
     padding: 0;
   }
   #About-description > div > p{
-    text-align: center;
+    text-align: start;
   }
   #skills{
     flex-wrap: wrap;
