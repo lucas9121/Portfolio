@@ -5,7 +5,7 @@ import {AiOutlineFileText} from "react-icons/ai"
 export default function Footer(props) {
     return (
         <div className={props.toggle ? "Footer FooterNight" : "Footer"}>
-            <p>&copy;LC 2022</p>
+            <p>Copyright &copy; 2022 | Lucas Carlos</p>
             <nav>
                 <ul>
                     <li><a href="https://drive.google.com/file/d/1V9aUk79pMPNuxODgle9JL5Gwcd55XXKT/view?usp=share_link" target="_blank" download="resume" className="Link footerLink"><AiOutlineFileText style={{height: '2rem', width: '3rem'}}/></a></li>
