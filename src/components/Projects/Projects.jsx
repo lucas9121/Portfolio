@@ -14,51 +14,6 @@ import ImageSlider from '../ImageSlider'
 export default function Projects(props) {
     return (
         <div className={props.toggle ? "ProjectsGrid nightMode" : "ProjectsGrid"}>
-                        <article className="my-projects">
-                <ImageSlider images={PBImages} />
-                <div className="game-description">
-                    <h1>Psych Byte</h1>
-                    <p><span style={{color: 'green', fontSize: '3rem'}}>P</span>sych Bite is an application that sends an email every morning based off 3 authors revolving around finance, psychology and faith. People can add their email on the website to receive one adn unsubscribe in the link on the email.</p>
-                    <div className="tech">
-                        <div>
-                            <p>HTML</p>
-                            <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
-                        </div>
-                        <div>
-                            <p>CSS</p>
-                            <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
-                        </div>
-                        <div>
-                            <p>JavaScript</p>
-                            <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
-                        </div>
-                        <div>
-                            <p>MongoDB</p>
-                            <SiMongodb style={{height: '2rem', width: '3rem'}} className='mdb' />
-                        </div>
-                        <div>
-                            <p>Google API</p>
-                            <FcGoogle style={{height: '2rem', width: '3rem'}} className='google'/>
-                        </div>
-                        <div>
-                            <p>React</p>
-                            <SiReact style={{height: '2rem', width: '3rem'}} className='react' />
-                        </div>
-                        <div>
-                            <p>NodeJS</p>
-                            <IoLogoNodejs style={{height: '2rem', width: '3rem'}} className='node' />
-                        </div>
-                        <div>
-                            <p>Bootstrap</p>
-                            <FaBootstrap style={{height: '2rem', width: '3rem'}} className='bootstrap'/>
-                        </div>
-                    </div>
-                    <ul>
-                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
-                    </ul>
-                </div>
-            </article>
             <article className="my-projects">
                 <ImageSlider images={GHImages} />
                 <div className="game-description">
@@ -101,6 +56,47 @@ export default function Projects(props) {
                     <ul>
                         <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Gamehub" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
                         <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://gamehub-react.herokuapp.com/games" target="_blank"><BsJoystick style={{height: '2rem', width: '3rem'}} id='unit3'/></a></li>
+                    </ul>
+                </div>
+            </article>
+            <article className="my-projects">
+                <ImageSlider images={PBImages} />
+                <div className="game-description">
+                    <h1>Psych Byte</h1>
+                    <p><span style={{color: 'green', fontSize: '3rem'}}>P</span>sych Bite is an application that sends an email every morning based off 3 authors revolving around finance, psychology and faith. People can add their email on the website to receive one adn unsubscribe in the link on the email.</p>
+                    <div className="tech">
+                        <div>
+                            <p>HTML</p>
+                            <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                        </div>
+                        <div>
+                            <p>CSS</p>
+                            <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                        </div>
+                        <div>
+                            <p>JavaScript</p>
+                            <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                        </div>
+                        <div>
+                            <p>MongoDB</p>
+                            <SiMongodb style={{height: '2rem', width: '3rem'}} className='mdb' />
+                        </div>
+                        <div>
+                            <p>React</p>
+                            <SiReact style={{height: '2rem', width: '3rem'}} className='react' />
+                        </div>
+                        <div>
+                            <p>NodeJS</p>
+                            <IoLogoNodejs style={{height: '2rem', width: '3rem'}} className='node' />
+                        </div>
+                        <div>
+                            <p>Bootstrap</p>
+                            <FaBootstrap style={{height: '2rem', width: '3rem'}} className='bootstrap'/>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
                     </ul>
                 </div>
             </article>
