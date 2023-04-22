@@ -1,7 +1,7 @@
 import "./Projects.css"
 import {BsGithub, BsJoystick} from 'react-icons/bs'
 import {AiOutlineHtml5} from 'react-icons/ai'
-import {FaCss3Alt, FaBootstrap, FaTruck, FaDungeon} from 'react-icons/fa'
+import {FaCss3Alt, FaBootstrap, FaTruck, FaDungeon, FaCoffee} from 'react-icons/fa'
 import {IoLogoJavascript, IoLogoNodejs} from 'react-icons/io'
 import {SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop} from 'react-icons/si'
 import {FcGoogle} from 'react-icons/fc'
@@ -95,8 +95,8 @@ export default function Projects(props) {
                         </div>
                     </div>
                     <ul>
-                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
+                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/favorite-quotes" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://psych-bite.herokuapp.com/" target="_blank"><FaCoffee id='PBIcon'/></a></li>
                     </ul>
                 </div>
             </article>
