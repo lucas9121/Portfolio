@@ -31,9 +31,7 @@ export default function App() {
     const scrollTop = evt.currentTarget.scrollTop
     if(scrollTop > 0){
       setSticky(true)
-      document.querySelector(".App").style.paddingTop = "10px"
     } else {
-      document.querySelector(".App").style.paddingTop = ""
       setSticky(false)
     }
   }
