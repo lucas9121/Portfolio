@@ -11,7 +11,7 @@
 
 #AboutMe{
     display: flex;
-    padding: 100px 0 20px 0;
+    padding: 10px 0 20px 0;
     gap: 10px;
 }
 
@@ -87,6 +87,9 @@
     flex-direction: column;
     align-items: center;
     padding: 0;
+  }
+  #About-description > div {
+    max-height: fit-content;
   }
   #About-description > div > p{
     text-align: start;

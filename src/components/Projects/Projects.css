@@ -4,7 +4,7 @@
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px 100px;
     align-items: center;
-    height: calc(100vh - 230px);
+    /* height: calc(100vh - 230px); */
     overflow-y : scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -70,7 +70,6 @@
     width: clamp(330px, 61vw, 500px);
     background: gainsboro;
     background: #fffcfc2b;
-    overflow: auto;
     padding: 15px 15px 0 15px;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -84,19 +83,23 @@
     font-size: clamp(1.5rem, 5vw, 2rem);
     margin-bottom: 0;
     margin-top: 5px;
+    flex: 1;
 }
   
 .game-description > p{
+    flex: 5;
     font-size: clamp(1rem, 5vw, 1.5rem);
     margin-bottom: 0;
     margin-top: 5px;
-    padding: 0 1%;
+    padding: 0.5% 1%;
     text-indent: 2%;
     line-height: 1.2em;
     text-align: justify;
+    overflow: auto;
 }
   
 .game-description > ul {
+    flex: 1;
     list-style: none;
     margin: 0;
     display: flex;
