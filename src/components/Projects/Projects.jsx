@@ -54,8 +54,8 @@ export default function Projects(props) {
                         </div>
                     </div>
                     <ul>
-                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Gamehub" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://gamehub-react.herokuapp.com/games" target="_blank"><BsJoystick style={{height: '2rem', width: '3rem'}} id='unit3'/></a></li>
+                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Gamehub" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://gamehub-react.herokuapp.com/games" target="_blank" rel="noreferrer"><BsJoystick style={{height: '2rem', width: '3rem'}} id='unit3'/></a></li>
                     </ul>
                 </div>
             </article>
@@ -95,8 +95,8 @@ export default function Projects(props) {
                         </div>
                     </div>
                     <ul>
-                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/favorite-quotes" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://psych-bite.herokuapp.com/" target="_blank"><FaCoffee id='PBIcon'/></a></li>
+                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/favorite-quotes" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://psych-bite.herokuapp.com/" target="_blank" rel="noreferrer"><FaCoffee id='PBIcon'/></a></li>
                     </ul>
                 </div>
             </article>
@@ -140,8 +140,8 @@ export default function Projects(props) {
                         </div>
                     </div>
                     <ul>
-                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
+                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank" rel="noreferrer"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
                     </ul>
                 </div>
             </article>
@@ -169,8 +169,8 @@ export default function Projects(props) {
                         </div>
                     </div>
                     <ul>
-                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Wars-of-Vogrora" target="_blank"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://lucas9121.github.io/Wars-of-Vogrora/" target="_blank"><FaDungeon style={{height: '2rem', width: '3rem'}} id='unit1'/></a></li>
+                        <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Wars-of-Vogrora" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
+                        <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://lucas9121.github.io/Wars-of-Vogrora/" target="_blank" rel="noreferrer"><FaDungeon style={{height: '2rem', width: '3rem'}} id='unit1'/></a></li>
                     </ul>
                 </div>
             </article>
