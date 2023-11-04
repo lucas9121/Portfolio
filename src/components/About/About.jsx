@@ -22,17 +22,20 @@ export default function About({toggle}){
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
-                            <li>JSX</li>
-                            <li>Github</li>
+                            <li>Python</li>
+                            <li>Github Pages</li>
                             <li>MongoDb</li>
-                            <li>ExpressJs</li>
+                            <li>Express</li>
+                            <li>Git</li>
+                            <li>Rest API</li>
+                            <li>NPM</li>
                             <li>React</li>
-                            <li>NodeJs</li>
+                            <li>NodeJS</li>
                             <li>MVC</li>
                             <li>Postman</li>
                             <li>Bootstrap</li>
                             <li>Heroku</li>
-                            <li>Python</li>
+                            <li>Netlify</li>
                         </ul>
                     </div>
                 </div>
