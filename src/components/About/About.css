@@ -10,6 +10,7 @@
 }
 
 #AboutMe{
+    height: calc(100% - 180px);
     display: flex;
     padding: 10px 0 20px 0;
     gap: 10px;
@@ -32,14 +33,22 @@
     flex-direction: column;
 }
 
-#About-description > div{
-    max-height: 350px;
+/* #About-description > div{
+    
+} */
+
+#About-description > div:nth-child(1){
+    flex: 4;
+    margin-bottom: 10px;
     overflow-y: auto;
     overflow-x: hidden;
     -ms-overflow-style: none;
-    -ms-overflow-style: none;
     scrollbar-width: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
+
 
 #About-description > div::-webkit-scrollbar {
     display: none;
@@ -66,6 +75,9 @@
     font-size: clamp(1rem, 4vw, 1.5rem);
     font-weight: 800;
     gap: 10px;
+    border-top: solid 1px;
+    padding-top: 5px;
+    flex: 1;
 }
 
 #skills > ul {
@@ -83,29 +95,65 @@
 
 
 @media (max-width: 1250px){
-  #AboutMe{
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-  #About-description > div {
-    max-height: fit-content;
-  }
-  #About-description > div > p{
-    text-align: start;
-  }
-  #skills{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  #skills > ul{
-    justify-content: center;
-    margin: 0;
-  }
+    #About{
+        height: fit-content;
+    }
+    #AboutMe{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    #About-description {
+        width: 75%;
+        height: 40vh;
+    }
+
+    #About-description > div {
+        max-height: 350px;
+    }
+
+    #About-description > div:nth-child(1) {
+        overflow: auto;
+    }
+    #About-description > div > p{
+        text-align: start;
+    }
+    #skills{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #skills > ul{
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1175px){
+    #About-description {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 1120px){
+    #About-description {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 885px){
+    #About-description {
+        height: 55vh;
+    }
 }
 
 @media (max-height: 820px){
     #About{
         height: 100%;
+    }
+}
+
+@media (max-width: 760px){
+    #About-description {
+        height: 60vh;
     }
 }
