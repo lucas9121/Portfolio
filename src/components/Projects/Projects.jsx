@@ -18,7 +18,7 @@ export default function Projects(props) {
                 <ImageSlider images={GHImages} />
                 <div className="game-description">
                     <h1>Gamehub</h1>
-                    <p><span id="GH">G</span>amehub is a full CRUD mock online gaming store. You can browse through different game titles or search for them in the search bar. Some of the features of available include; purchasing games, writing reviews, as well as editing or deleting your reviews, creating and editing your own games and editing your account. Sign up with a Gamer or Developer account to try all of the different features the website has to offer.</p>
+                    <p><span id="GH">G</span>amehub is a single-page application (SPA) that I conceived and developed entirely on my own. As a personal project aimed at demonstrating proficiency in the MERN stack, Gamehub draws inspiration from platforms like Steam. Leveraging both front-end and back-end technologies, I engineered this platform from the ground up to ensure a smooth and immersive shopping experience for users.</p>
                     <div className="tech">
                         <div >
                             <p>HTML</p>
