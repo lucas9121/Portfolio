@@ -9,12 +9,15 @@ export default function About({toggle}){
                 <img src={"/images/A881DD38-7689-4ECB-9DA3-D26DFEB03838_1_105_c.jpeg"} alt="" id="About-img" />
                 <div id="About-description">
                     <div className={toggle ? "nightMode" : ""}>
-                        <p>I’m a software engineer with a passion for problem-solving and building functional web applications. With a background in both the criminal justice and education fields, I bring a unique perspective to software engineering and a commitment to creating solutions that help people. </p>
-                        <p>I have experience in HTML, CSS, JavaScript, and React, and I'm skilled in building dynamic and interactive web applications that provide users with a seamless experience. I'm also proficient in back-end web development technologies such as Node.js, Express.js, and MongoDB, which enables me to build and manage databases and create robust, scalable web applications.
-                            As a problem-solver at heart, I enjoy taking on new challenges and finding creative solutions to complex problems. Whether it's building a feature-rich web application or optimizing code for maximum efficiency, I'm always striving to learn and improve my skills. 
+                        <p>
+                            I'm a full-stack software engineer with diverse experiences in criminal justice and education, which have shaped my approach to problem-solving and my dedication to creating impactful solutions for users. My work revolves around building functional and intuitive web applications. Whether it's designing seamless user interfaces or architecting robust backend systems, I'm driven by a love for turning ideas into reality. You can see some of my work in the Projects section. 
                         </p>
-                        <p>When I'm not coding, you can find me playing the piano or video games, or volunteering for causes I'm passionate about. I believe that a well-rounded individual is an asset in any workplace, and I bring that same level of dedication and passion to my work as a software engineer.</p>
-                        <p>If you're looking for a skilled and motivated software engineer who is committed to creating functional and user-friendly web applications, I'd love to talk to you about how I can contribute to your team. Thank you for visiting my portfolio, and I look forward to connecting with you soon.</p>
+                        <p>
+                            At my core, I thrive on challenges and enjoy exploring innovative solutions to complex problems. Whether it's building feature-rich applications or streamlining processes for efficiency, I'm always eager to learn and grow. I find great joy in continually expanding my skill set and embracing new technologies.
+                        </p>
+                        <p>
+                            I firmly believe that a well-rounded individual brings depth to any team, and I'm committed to bringing that same energy and dedication to my role as a software engineer. If you're seeking a motivated developer who is dedicated to creating user-friendly solutions, I'd love to chat about how I can contribute to your team. Thanks for stopping by my portfolio, and I'm excited to connect with you soon.
+                        </p>
                     </div>
                     <div id="skills">
                         Skills:
