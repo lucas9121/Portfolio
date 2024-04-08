@@ -18,11 +18,6 @@ const RFTImages = [
         id: 4,
         src: "/images/RFT/RFT4.png",
         alt: "Roaming Spoon image 4"
-    },
-    {
-        id: 5,
-        src: "/images/RFT/RFT5.png",
-        alt: "Roaming Spoon image 5"
     }
 ]
 
