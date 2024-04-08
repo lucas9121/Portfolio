@@ -23,11 +23,11 @@ const GHImages = [{
     src: "/images/GH/GH9.png",
     alt: "Gamehub image 5"
 },
-{
-    id: 6,
-    src: "/images/GH/GH4.png",
-    alt: "Gamehub image 4"
-}
+// {
+//     id: 6,
+//     src: "/images/GH/GH4.png",
+//     alt: "Gamehub image 4"
+// }
 ]
 
 export default GHImages
