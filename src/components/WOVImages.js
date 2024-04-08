@@ -19,11 +19,6 @@ const WOVImages = [
         src: "/images/WOV/WOV4.png",
         alt: "Wars of Vogrora image 4"
     },
-    {
-        id: 5,
-        src: "/images/WOV/WOV5.png",
-        alt: "Wars of Vogrora image 5"
-    }
 ]
 
 export default WOVImages
