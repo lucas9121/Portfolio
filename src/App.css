@@ -1,141 +1,48 @@
-
-@property --horizontal {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 95%;
-}
-
-@property --vertical {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 15%;
-}
-
-@property --first {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #ffd20096
-}
-
-@property --second {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #ffd2001f
-}
-
-@property --third {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #ffd2001f
-}
-
-@property --fourth {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #ffd2001f
-}
-@property --fifth {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #f0f8ff4f
-}
-
-@property --sixth {
-  syntax: '<color>';
-  inherits: false;
-  initial-value: #f0f8ffa8
-}
-
-
 .App {
   text-align: center;
   height: 100vh;
-  background: deepskyblue;
-  background: radial-gradient(at 95% 15%, deepskyblue, deepskyblue, deepskyblue, deepskyblue, deepskyblue, #a6a6a6);
+  background: #fafafaeb;
+  /* background: radial-gradient(
+    at 95% 15%,
+    deepskyblue,
+    deepskyblue,
+    deepskyblue,
+    deepskyblue,
+    deepskyblue,
+    #a6a6a6
+  ); */
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  transition: color 4s;
+  transition: color, background 2s;
 }
 
 .App::-webkit-scrollbar {
   display: none;
 }
 
-.subDiv {
-  height: calc(101vh - 80px);
+.content-section {
+  height: calc(101vh - (80px + 2rem));
   /* height: 100%; */
-  --horizontal: 95%;
-  --vertical: 15%;
-  --first: transparent;
-  --second: transparent;
-  --third: transparent;
-  --fourth: transparent;
-  --fifth: transparent;
-  --sixth: transparent;
-  background: radial-gradient(at var(--horizontal) var(--vertical), var(--first), var(--second), var(--third), var(--fourth), var(--fifth), var(--sixth));
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.dayMode{
-  animation: sunriseSky 5s ease forwards;
+
+.content-section::-webkit-scrollbar {
+  display: none;
 }
 
-.subDiv::-webkit-scrollbar {
-    display: none;
-}
 
-.Sun{
-  opacity: 1;
-	box-shadow: 0px 0px 15px 3px #ffd200c4;
-	width: 100px;
-	height: 100px;
-  width: clamp(22px, 15vw, 100px);
-  height: clamp(22px, 15vw, 100px);
-	position: absolute;
-	top: 15vh;
-	/* left: 93vw; */
-  right: 2vw;
-	border-radius: 50%;
-	background: radial-gradient(circle, #ffd200 95%, #f7971e);
-  z-index: 1;
-}
-
-.dayMode > .Sun {
-  animation: sunrise 5s ease forwards;
-}
-
-.Moon{
-  opacity: 0;
-  box-shadow: 0px 0px 15px 3px #f5f3ce;
-  width: 100px;
-  height: 100px;
-  width: clamp(22px, 15vw, 100px);
-  height: clamp(22px, 15vw, 100px);
-  position: absolute;
-  top: 15vh;
-  left: 2vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, #f5f5ec, #f5fece);
-  z-index: 1;
-}
-
-.dayMode > .Moon {
-  opacity: 1;
-  animation: moondown 5s ease forwards;
-}
-
-.AppNight{
+.AppNight {
   color: white;
   background: #000e5e;
-  background: radial-gradient(at 4% 15%, #0c2293, #0c2293, #0c2293, #000e5e, #000834, #000000ff)
 }
 
-.subDivNight {
+.content-section-dark {
   --horizontal: 4%;
   --vertical: 15%;
   --first: transparent;
@@ -144,241 +51,20 @@
   --fourth: transparent;
   --fifth: transparent;
   --sixth: transparent;
-  background: radial-gradient(at var(--horizontal) var(--vertical), var(--first), var(--second), var(--third), var(--fourth), var(--fifth), var(--sixth));
-  animation: moonriseSky 6s ease forwards;
+
 }
 
-.subDivNight > .Sun{
-  	animation: sundown 5s ease forwards;
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  pointer-events: none; 
+  /* Allow clicks to pass through the layer */
+  background-color: rgb(43 114 175); 
 }
 
-.subDivNight > .Moon {
-  animation: moonrise 5s ease forwards;
-}
 
 
-
-@keyframes sundown {
-  from {
-    top: 15vh
-  }
-  80% {
-    opacity: 1;
-  }
-  to {
-    top: 99vh;
-    opacity: 0;
-  }
-}
-
-@keyframes sunrise {
-  from {
-    top: 99vh;
-    opacity: 1;
-  }
-  to {
-    top: 15vh;
-  }
-}
-
-@keyframes moonrise {
-  from {
-    top: 99vh;
-    opacity: 1;
-  }
-  to {
-    top: 15vh;
-    opacity: 1;
-  }
-}
-
-@keyframes moondown {
-  from {
-    top: 15vh
-  }
-  60% {
-    opacity: 1;
-  }
-  to {
-    top: 99vh;
-    opacity: 0;
-  }
-}
-
-@keyframes sunriseSky {
-  from {
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #000e5e;
-    --fifth: #000e5e;
-    --sixth: #000e5e;
-  }
-  2%{
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #0c2293;
-    --fifth: #0c2293;
-    --sixth: #0c2293;
-  }
-  3%{
-    --horizontal: 95%;
-    --vertical: 110%;
-  }
-  5% {
-    --horizontal: 95%;
-    --vertical: 110%;
-    --first: #ffd200e0;
-    --second: #ff206e94;
-    --third: #0c2293;
-    --fourth: #0c2293;
-    --fifth: #000e5e;
-    --sixth: #000834;
-  }
-  25%{
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: #00bfff;
-    --fourth: #ff206e94;
-    --fifth: #0c2293;
-    --sixth: #000e5e;
-  }
-  50% {
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: #00bfff;
-    --fourth: #00000000;
-    --fifth: #ff206e94;
-    --sixth: #0c2293;
-  }
-  75% {
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: #00bfff;
-    --fourth: #00000000;
-    --fifth: #00000000;
-    --sixth: #ff206e94;
-  }
-  90%{
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: #00bfff;
-    --fourth: #00000000;
-    --fifth: #00000000;
-    --sixth: #00000000;
-  }
-  to{
-    --horizontal: 95%;
-    --vertical: 15%;
-    --first: #ffd20096;
-    --second: #00bfff;
-    --third: #00bfff;
-    --fourth: #00bfff;
-    --fifth: #00bfff;
-    --sixth: #a6a6a6;
-  }
-}
-
-@keyframes moonriseSky{
-  from {
-    --horizontal: 95%;
-    --vertical: 15%;
-    --first: #ffd20096;
-    --second: #00bfff;
-    --third: #00bfff;
-    --fourth: #00bfff;
-    --fifth: #00bfff;
-    --sixth: #a6a6a6;
-  }
-  5% {
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: deepskyblue;
-    --fourth: #00bfff;
-    --fifth: #00bfff;
-    --sixth: #ff206e94;
-  }
-  25% {
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: deepskyblue;
-    --fourth: #00bfff;
-    --fifth: #ff206e94;
-    --sixth: #0c2293;
-  }
-  50%{
-    --first: #ffd200e0;
-    --second: #ffd20096;
-    --third: deepskyblue;
-    --fourth: #ff206e94;
-    --fifth: #0c2293;
-    --sixth: #000e5e;
-  }
-  75% {
-    --horizontal: 95%;
-    --vertical: 110%;
-    --first: #ffd200e0;
-    --second: #ff206e94;
-    --third: #0c2293;
-    --fourth: #0c2293;
-    --fifth: #0c2293;
-    --sixth: #000e5e;
-    /* --fifth: #000e5e;
-    --sixth: #000834; */
-  }
-  80% {
-    --horizontal: 95%;
-    --vertical: 110%;
-    --sixth: #0c2293;
-    --fifth: #0c2293;
-    --fourth: #0c2293;
-    --third: #0c2293;
-    --second: #0c2293;
-    --first: #0c2293;
-  }
-  85%{
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #0c2293;
-    --fifth: #0c2293;
-    --sixth: #0c2293;
-  }
-  90%{
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #000e5e;
-    --fifth: #000e5e;
-    --sixth: #000e5e;
-  }
-  95%{
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #0c2293;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #000e5e;
-    --fifth: #000834;
-    --sixth: #000000cf;
-  }
-  to {
-    --horizontal: 4%;
-    --vertical: 15%;
-    --first: #ffffff61;
-    --second: #0c2293;
-    --third: #0c2293;
-    --fourth: #000e5e;
-    --fifth: #000834;
-    --sixth: #000000cf;
-  }
-}
