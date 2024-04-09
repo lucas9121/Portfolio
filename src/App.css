@@ -29,6 +29,7 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  color: #3c3c3ce3;
 }
 
 
@@ -43,6 +44,7 @@
 }
 
 .content-section-dark {
+  color: gainsboro;
   --horizontal: 4%;
   --vertical: 15%;
   --first: transparent;

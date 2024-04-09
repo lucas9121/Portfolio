@@ -17,8 +17,8 @@
   background: url(../../../public/logo.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 14%;
+  width: clamp(200px, 45vw, 400px);
+  height: clamp(50px, 11vw, 100px);
   background-color: #ffffff82;
   color: #fff;
   border: none;
@@ -215,9 +215,6 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 1250px){
-  .sticky  #logo {
-    width: 50%;
-  }
 
   .sticky > nav {
     position: relative;
@@ -237,10 +234,12 @@ input:checked + .slider:before {
     position: absolute;
     top: 70px;
     right: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     padding: 0 7px;
     background: #000000cc;
+    font-size: .8rem;
   }
 
   .list > a {
@@ -265,7 +264,5 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 1250px) {
-  .Header {
-    padding: 0;
-  }
+
 }
