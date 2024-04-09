@@ -2,13 +2,12 @@ import './About.css'
 
 export default function About({toggle}){
     return(
-        <article id="About">
+        <div id="About">
             <h2>About me</h2>
-            <div id="AboutMe">
-                {/* <div id="About-img"></div> */}
-                <img src={"/images/A881DD38-7689-4ECB-9DA3-D26DFEB03838_1_105_c.jpeg"} alt="" id="About-img" />
+            <article id="AboutMe">
                 <div id="About-description">
                     <div className={toggle ? "nightMode" : ""}>
+                        <h3 className='about-title'>Who I am</h3>
                         <p>
                             I'm a full-stack software engineer with diverse experiences in criminal justice and education, which have shaped my approach to problem-solving and my dedication to creating impactful solutions for users. My work revolves around building functional and intuitive web applications. Whether it's designing seamless user interfaces or architecting robust backend systems, I'm driven by a love for turning ideas into reality. You can see some of my work in the Projects section. 
                         </p>
@@ -20,7 +19,7 @@ export default function About({toggle}){
                         </p>
                     </div>
                     <div id="skills">
-                        Skills:
+                        <h3 className='about-title'>My Skills</h3>
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
@@ -43,7 +42,7 @@ export default function About({toggle}){
                     </div>
                 </div>
 
-            </div>
-        </article>
+            </article>
+        </div>
     )
 }
