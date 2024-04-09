@@ -1,8 +1,6 @@
 .Main {
-  position: relative;
-  z-index: 2;
   max-width: 1600px;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   padding-top: 20px;
   background: #ffffff14;
@@ -12,4 +10,8 @@
   font-size: clamp(2rem, 5vw, 3rem);
   padding-left: 5%;
   margin-top: 0;
+}
+
+.Main > div {
+  padding: 8rem 0;
 }
