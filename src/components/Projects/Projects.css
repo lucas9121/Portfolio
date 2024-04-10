@@ -245,7 +245,6 @@
 
 .Link {
     color: black;
-    transition: color 2s;
 }
 .Link:hover {
     color: #686868;
