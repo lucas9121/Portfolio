@@ -253,7 +253,6 @@
 
 .LinkNight{
     color: gainsboro;
-    transition: color 2s;
 }
 
 .LinkNight:hover{
