@@ -1,17 +1,15 @@
 .Main {
   max-width: 1600px;
-  width: 95%;
-  margin: 0 auto;
   padding-top: 20px;
-  background: #ffffff14;
-}
-
-.Main > h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  padding-left: 5%;
-  margin-top: 0;
 }
 
 .Main > div {
-  padding: 8rem 0;
+  padding: 8rem 3rem;
+  margin: 0;
+}
+
+@media (max-width: 1250px){
+    .Main > div{
+        padding: 2rem;
+    }
 }

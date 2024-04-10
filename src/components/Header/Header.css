@@ -1,6 +1,5 @@
 .Header{
     position: sticky;
-    /* width: 100%; */
     height: 100%;
     padding: 0 10px;
     display: flex;
@@ -23,7 +22,6 @@
   color: #fff;
   border: none;
   z-index: 1;
-  cursor: pointer;
 }
 
 #portrait {
@@ -49,6 +47,50 @@
   font-size: 50px;
   cursor: pointer;
   animation: downarrow 2s infinite;
+}
+
+#mouse-icon {
+  position: absolute;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+#mouse {
+  width: 40px;
+  height: 70px;
+  border: 2px solid white;
+  border-radius: 19px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  &::before {
+    content: '';
+    width: 4px;
+    height: 9px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3a83c7;
+    border-radius: 50%;
+    opacity: 1;
+    animation: scroll-wheel 1.5s infinite;
+    -webkit-animation: scroll-wheel 1.5s infinite;
+  }
+}
+
+@keyframes scroll-wheel {
+  to {
+    opacity: 0;
+    top: 50px;
+  }
+}
+
+@-webkit-keyframes scroll-wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
 }
 
 .Header > nav {
@@ -80,9 +122,7 @@
 }
 
 .list > a:hover{
-  color: rgb(238 186 58);
   color: #3a84c7;
-  background: #f9f9f90a;
   border-radius: 50%;
   transition: .3s;
 }
@@ -101,13 +141,7 @@
 
 }
 
-/* .sticky > #logo {
-  margin-top: 10px;
-  width: 15%;
-  height: 75%;
-} */
-
-.sticky > #arrow {
+.sticky > #mouse-icon {
   display: none;
 }
 
@@ -162,7 +196,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffff00ab;
+  background-color: #fafafa7d;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -181,11 +215,11 @@
 }
   
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #282828;
 }
   
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #fafafa7d;
 }
   
 input:checked + .slider:before {
@@ -232,7 +266,7 @@ input:checked + .slider:before {
 
   .sticky > nav > .menu {
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 0;
     left: 0;
     display: flex;
@@ -261,8 +295,4 @@ input:checked + .slider:before {
   .sticky  #logo {
     width: 25%;
   }
-}
-
-@media (max-width: 1250px) {
-
 }

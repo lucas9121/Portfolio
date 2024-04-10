@@ -1,10 +1,27 @@
+.project-container{
+    background: white;
+    transition: color,background 2s;
+    &.dark{
+        background: #202020;
+        transition: color, background 2s;
+    }
+}
+.project-container > h2 {
+    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    margin-top: 0;
+    color: black;
+}
+
+.dark-mode{
+    color: gainsboro !important;
+}
 .ProjectsGrid {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px 100px;
+    grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
+    gap: 20px 0;
     align-items: center;
-    /* height: calc(100vh - 230px); */
     overflow-y : scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -36,13 +53,17 @@
     margin: 0 auto;
     padding: 2% 0;
     height: clamp(850px, 78vh, 950px);
-    width: clamp(358px, 61vw, 500px);
+    width: clamp(358px, 61vw, 535px);
 }
   
 .imgslider{
     height: clamp(200px, 50vh, 400px);
     width: clamp(358px, 61vw, 530px);
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px 15px 0 0;
+    border: solid;
+    border-bottom: none;
+    transition: color 2s;
+    border-bottom: none;
 }
   
 .slick-list{
@@ -61,16 +82,17 @@
   
 .game-description{
     flex: 2;
-    border-left: none;
+    border: solid;
+    border-top: none;
     border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
     height: clamp(200px, 33vh, 500px);
-    width: clamp(330px, 61vw, 500px);
-    background: gainsboro;
-    background: #fffcfc2b;
-    padding: 15px 15px 0 15px;
+    width: clamp(330px, 56.4vw, 500px);
+    background: #99999933;
+    padding: 15px;
+    transition: color 2s;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -79,19 +101,21 @@
     display: none;
 }
   
-.game-description > h1 {
+.game-description > h3 {
     font-size: clamp(1.5rem, 5vw, 2rem);
     margin-bottom: 0;
-    margin-top: 5px;
+    margin-top: 1rem;
     flex: 1;
+    color: black;
+    transition: color 2s;
 }
   
 .game-description > p{
     flex: 5;
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 5vw, 1.3rem);
     margin-bottom: 0;
     margin-top: 5px;
-    padding: 0.5% 1%;
+    padding: 5px 3px;
     text-indent: 2%;
     line-height: 1.2em;
     text-align: justify;
@@ -221,14 +245,16 @@
 
 .Link {
     color: black;
+    transition: color 2s;
 }
 .Link:hover {
-    color: white;
+    color: #686868;
     transition: .25s;
 }
 
 .LinkNight{
     color: gainsboro;
+    transition: color 2s;
 }
 
 .LinkNight:hover{
