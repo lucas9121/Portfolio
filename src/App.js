@@ -23,9 +23,7 @@ export default function App() {
     }
   };
 
-  const handleScrollToTop = () => {
-    document.querySelector(".content-section").scrollTo(0, 0)
-  }
+
 
   return (
     <div
@@ -39,10 +37,8 @@ export default function App() {
         setToggle={setToggle}
         sticky={sticky}
         setSticky={setSticky}
-        handleScrollToTop={handleScrollToTop}
       />
       <section className={toggle ? "content-section content-section-dark" : "content-section"}>
-        <div className="background-layer"></div>
           <Main toggle={toggle} />
           <Footer toggle={toggle} />
 
