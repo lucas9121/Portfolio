@@ -1,15 +1,25 @@
-import { BsSunFill, BsMoonFill, BsArrowDownCircle } from 'react-icons/bs'
 import { BiMenu } from 'react-icons/bi'
 import "./Header.css"
 import { useState } from 'react'
 
-export default function Headers({toggle, setToggle, sticky, setSticky, handleScrollToTop}) {
+export default function Headers({toggle, setToggle, sticky, setSticky}) {
     const [show, setShow] = useState(false)
+
+    const handleScrollToTop = () => {
+        document.querySelector(".content-section").scrollTo(0, 0)
+    }
+
+    const scrollDown = () => {
+        document.querySelector('.App').scrollTo({
+            top: window.scrollY + 50, 
+            behavior: 'smooth' 
+        })
+    }
 
     return (
         <header className={sticky ? "Header sticky" : "Header"}>
             <div id={!sticky ? "logo" : "portrait"} onClick={() => handleScrollToTop()}></div>
-            <BsArrowDownCircle id='arrow' onClick={() => {setSticky(!sticky)}} />
+            <div id="mouse-icon"><div id="mouse" onClick={() => {setSticky(!sticky); scrollDown()}}></div> </div>
             <nav>
                 <BiMenu className='hamburger' onClick={() => {setShow(!show)}} />
                 <ul className={show ? "menu" : ""}>
@@ -18,12 +28,10 @@ export default function Headers({toggle, setToggle, sticky, setSticky, handleScr
                     <li className='list'><a className={toggle ? 'night' : ""} href="mailto:lucas2carlos@gmail.com" target="_blank" rel="noreferrer" onClick={() => {setShow(false)}}>Contact me</a></li>
                     <li className='list' style={{height: '100%'}}>
                         <div id="toggle">
-                            {/* <BsSunFill style={{color: 'yellow'}} /> */}
                             <label className="switch" onClick={() => {setShow(false)}}>
                                 <input type="checkbox" onClick={() => {setToggle(!toggle)}} />
                                 <span className="slider round"></span>
                             </label>
-                            {/* <BsMoonFill style={{color: '#2196F3'}} /> */}
                         </div>
                     </li>
                 </ul>
