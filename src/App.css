@@ -23,8 +23,7 @@
 }
 
 .content-section {
-  height: calc(101vh - (80px + 4rem));
-  padding: 1rem;
+  height: calc(101vh - (80px + 2rem));
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
