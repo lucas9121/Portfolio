@@ -3,11 +3,11 @@ import './About.css'
 export default function About({toggle}){
     return(
         <div id="About">
-            <h2 className={toggle && 'dark-mode'}>About me</h2>
+            <h2 className={toggle ? 'dark-mode' : ""}>About me</h2>
             <article id="AboutMe">
                 <div id="About-description">
                     <div>
-                        <h3 className={toggle ? 'dark-mode' :'about-title'}>Who I am</h3>
+                        <h3 className={toggle ? 'about-title dark-mode' :'about-title'}>Who I am</h3>
                         <p>
                             I'm a full-stack software engineer with diverse experiences in criminal justice and education, which have shaped my approach to problem-solving and my dedication to creating impactful solutions for users. My work revolves around building functional and intuitive web applications. Whether it's designing seamless user interfaces or architecting robust backend systems, I'm driven by a love for turning ideas into reality. You can see some of my work in the Projects section. 
                         </p>
@@ -19,7 +19,7 @@ export default function About({toggle}){
                         </p>
                     </div>
                     <div id="skills">
-                        <h3 className={toggle ? 'dark-mode' :'about-title'}>My Skills</h3>
+                        <h3 className={toggle ? 'about-title dark-mode' :'about-title'}>My Skills</h3>
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
