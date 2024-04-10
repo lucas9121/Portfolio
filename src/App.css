@@ -23,8 +23,8 @@
 }
 
 .content-section {
-  height: calc(101vh - (80px + 2rem));
-  /* height: 100%; */
+  height: calc(101vh - (80px + 4rem));
+  padding: 1rem;
   overflow: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -40,33 +40,9 @@
 
 .AppNight {
   color: white;
-  background: #000e5e;
+  background: #282828;
 }
 
 .content-section-dark {
   color: gainsboro;
-  --horizontal: 4%;
-  --vertical: 15%;
-  --first: transparent;
-  --second: transparent;
-  --third: transparent;
-  --fourth: transparent;
-  --fifth: transparent;
-  --sixth: transparent;
-
 }
-
-.background-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; 
-  pointer-events: none; 
-  /* Allow clicks to pass through the layer */
-  background-color: rgb(43 114 175); 
-}
-
-
-
