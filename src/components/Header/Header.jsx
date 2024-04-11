@@ -7,25 +7,27 @@ export default function Headers({toggle, setToggle, sticky, setSticky}) {
 
     const handleScrollToTop = () => {
         document.querySelector(".content-section").scrollTo(0, 0)
+        setSticky(!sticky)
     }
 
     const scrollDown = () => {
         document.querySelector('.App').scrollTo({
-            top: window.scrollY + 50, 
+            top: window.scrollY + 500, 
             behavior: 'smooth' 
         })
     }
 
     return (
-        <header className={sticky ? "Header sticky" : "Header"}>
-            <div id={!sticky ? "logo" : "portrait"} onClick={() => handleScrollToTop()}></div>
-            <div id="mouse-icon"><div id="mouse" onClick={() => {setSticky(!sticky); scrollDown()}}></div> </div>
+        <header className={sticky ? "sticky" : ""}>
+            <div id="portrait" className={!sticky ? 'hide' : 'show'} onClick={() => handleScrollToTop()}></div>
+            {!sticky && <div className="background-overlay"></div> }
+            <div id="mouse-icon" className={sticky ? 'hide' : 'show'}><div id="mouse" onClick={() => {setSticky(!sticky); scrollDown()}}></div> </div>
             <nav>
                 <BiMenu className='hamburger' onClick={() => {setShow(!show)}} />
-                <ul className={show ? "menu" : ""}>
-                    <li className='list'><a className={toggle ? 'night' : ""} href="#About" onClick={() => {setShow(false)}}>About</a></li>
-                    <li className='list'><a className={toggle ? 'night' : ""} href="#Projects" onClick={() => {setShow(false)}}>Projects</a></li>
-                    <li className='list'><a className={toggle ? 'night' : ""} href="mailto:lucas2carlos@gmail.com" target="_blank" rel="noreferrer" onClick={() => {setShow(false)}}>Contact me</a></li>
+                <ul id={show ? "header-menu" : ""}>
+                    <li className='list'><a href="#About" onClick={() => {setShow(false)}}>About</a></li>
+                    <li className='list'><a href="#Projects" onClick={() => {setShow(false)}}>Projects</a></li>
+                    <li className='list'><a href="mailto:lucas2carlos@gmail.com" target="_blank" rel="noreferrer" onClick={() => {setShow(false)}}>Contact me</a></li>
                     <li className='list' style={{height: '100%'}}>
                         <div id="toggle">
                             <label className="switch" onClick={() => {setShow(false)}}>
