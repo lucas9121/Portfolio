@@ -1,44 +1,70 @@
-.Footer{
+footer{
     background: linear-gradient(0deg, rgba(240, 254, 255, 0.8), rgba(240, 254, 255, 0.7), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6));
+    background: black;
+    padding: 4rem 1.5rem 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 2;
+    color: white;
 }
 
-.Footer > p {
+footer > p {
     margin: 0;
     font-weight: 700;
 }
 
-.Footer > nav > ul {
+.footer-container {
     display: flex;
-    margin: .5em;
+    flex-direction: column;
 }
 
-.Footer > nav > ul > li {
+.footer-container > h2 & h4 {
+    margin-top: 0;
+    text-align: start;
+    &h4{
+        margin: 0
+    }
+}
+
+
+.footer-container > ul {
+    display: flex;
+    padding: 1rem 0;
+    margin: 0;
+    margin-left: 90%;
+}
+
+.footer-container > ul > li {
     list-style: none;
 }
 
-.FooterNight{
+.footer-container > ul > li > a > svg {
+    height: 1.5rem;
+    width: 2.5rem;
+}
+
+/* footerNight{
     background: #030c14c7;
-}
-
-.FooterNight #Linkedin {
-    color: white;
-}
-
-.FooterNight .footerLink {
-    color: white;
-}
+} */
   
 #Linkedin:hover {
     color: cornflowerblue;
     transition: .25s;
 }
 
-.footerLink:hover {
-    color: rgb(126, 125, 125);
-    transition: .25s;
+.footer-icon{
+    color: white;
+    &:hover {
+        color: rgb(126, 125, 125);
+        transition: .25s;
+    }
+}
+
+.footer-lower {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: solid 1px;
+    width: 91vw;
 }
