@@ -1,18 +1,21 @@
 import "./Footer.css"
-import {BsLinkedin, BsGithub} from "react-icons/bs"
-import {AiOutlineFileText} from "react-icons/ai"
+import { FaGithub, FaXTwitter, FaLinkedinIn, FaRegFileLines } from "react-icons/fa6";
+import { AiOutlineFileText } from "react-icons/ai"
 
 export default function Footer(props) {
     return (
-        <div className={props.toggle ? "Footer FooterNight" : "Footer"}>
-            <p>Copyright &copy; 2022 | Lucas Carlos</p>
-            <nav>
+        <footer>
+            <nav className="footer-container">
+                <h2>Lucas Carlos</h2>
+                <h4>Full-Stack Software Engineer</h4>
                 <ul>
-                    <li><a href="https://drive.google.com/file/d/1dSCBGKIISxkCr91MVLnHLdmI63e6GTIo/view?usp=sharing" target="_blank" rel="noreferrer" download="resume" className="Link footerLink"><AiOutlineFileText style={{height: '2rem', width: '3rem'}}/></a></li>
-                    <li><a href='https://github.com/lucas9121' target='_blank' rel="noreferrer" className='Link Github footerLink'><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                    <li><a href='https://www.linkedin.com/in/lucas-carlos-915b23127/' target='_blank' rel="noreferrer" className='Link' id='Linkedin'> <BsLinkedin style={{height: '2rem', width: '3rem'}}/></a></li>
+                    <li><a href='https://github.com/lucas9121' target='_blank' rel="noreferrer" className='Link Github footer-icon'><FaGithub  /></a></li>
+                    <li><a href='https://www.linkedin.com/in/lucas-carlos-915b23127/' target='_blank' rel="noreferrer" className='Link footer-icon' id='Linkedin'> <FaLinkedinIn /></a></li>
+                    <li><a href='https://twitter.com/CodingLucas9121' target='_blank' rel="noreferrer" className='Link footer-icon' id='Twitter'> <FaXTwitter /></a></li>
+                    <li><a href="https://drive.google.com/file/d/1dSCBGKIISxkCr91MVLnHLdmI63e6GTIo/view?usp=sharing" target="_blank" rel="noreferrer" download="resume" className="Link footer-icon"><FaRegFileLines /></a></li>
                 </ul>
+                <small className="footer-lower">&copy;Copyright 2024. Crafted by <u>Lucas Carlos</u></small>
             </nav>
-        </div>
+        </footer>
     )
 }
