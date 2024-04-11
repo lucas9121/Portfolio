@@ -11,12 +11,14 @@ export default function App() {
 
 
   useEffect(() => {
-    if (!sticky) document.querySelector(".content-section").scrollTo(0, 0);
-    document.querySelector(".ProjectsGrid").scrollTo(0, 0);
+    if (!sticky){
+      document.querySelector(".App").scrollTo(0, 0);
+    } 
   }, [sticky]);
 
   const handleScroll = (evt) => {
     const scrollTop = evt.currentTarget.scrollTop;
+    // console.log(scrollTop)
     if (scrollTop > 0) {
       setSticky(true);
     } else {
