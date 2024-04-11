@@ -1,5 +1,4 @@
 footer{
-    background: linear-gradient(0deg, rgba(240, 254, 255, 0.8), rgba(240, 254, 255, 0.7), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6), rgba(240, 254, 255, 0.6));
     background: black;
     padding: 4rem 1.5rem 2rem;
     display: flex;
@@ -33,9 +32,10 @@ footer > p {
 
 .footer-container > ul {
     display: flex;
+    justify-content: flex-end;
     padding: 1rem 0;
     margin: 0;
-    margin-left: 90%;
+    width: 100%;
 }
 
 .footer-container > ul > li {

@@ -1,7 +1,7 @@
 #About > h2 {
     font-size: 3rem;
     font-size: clamp(2.5rem, 5vw, 3rem);
-    margin-top: 0;
+    margin-top: -2rem;
     color: black;
     transition: color 2s;
 }
@@ -27,17 +27,6 @@
     flex-direction: column;
 }
 
-/* #About-description > div:nth-child(1){
-    margin-bottom: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    ::-webkit-scrollbar {
-        display: none;
-    }
-} */
-
 
 #About-description > div::-webkit-scrollbar {
     display: none;
@@ -55,7 +44,6 @@
     font-weight: 600;
     max-width: 60rem;
     line-height: 1.5;
-    /* font-size: clamp(1.2rem, 5vw, 2rem); */
     margin: 0;
     text-indent: 2%;
     color: inherit;
@@ -97,6 +85,7 @@
 }
 
 
+/* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
 @media (max-width: 1250px){
     #About-description{
         display: flex;
@@ -105,28 +94,8 @@
     }
 }
 
-@media (max-width: 1175px){
-
-}
-
-@media (max-width: 1120px){
-
-}
-
-@media (max-width: 900px){
-
-}
-
-@media (max-width: 885px){
-
-}
-
-@media (max-height: 820px){
-    #About{
-        height: 100%;
+@media (max-width: 450px){
+    .about-title{
+        text-align: center;
     }
-}
-
-@media (max-width: 760px){
-
 }

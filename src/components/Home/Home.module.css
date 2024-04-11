@@ -1,0 +1,36 @@
+.homeHero{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width: 100%;
+  max-width: 80vw;
+  color: white;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 100;
+  transition: opacity 2s;
+}
+
+.homeHero > h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.homeHeroInfo {
+  font-size: 2rem;
+}
+
+.homeHeroInfo > p {
+  margin: 2rem auto 0;
+}
+
+.hide{
+  position: absolute;
+  opacity: 0;
+  transition: opacity .5s;
+  pointer-events: none;
+}

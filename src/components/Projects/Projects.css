@@ -22,11 +22,6 @@
     grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
     gap: 20px 0;
     align-items: center;
-    overflow-y : scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: 5px;
 }
 
 .ProjectsGrid::-webkit-scrollbar {
@@ -121,9 +116,21 @@
     text-align: justify;
     overflow: auto;
 }
-  
-.game-description > ul {
+
+.project-links-container{
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-links-container > b {
+    font-weight: bold;
+    color: inherit;
+}
+  
+.project-links {
     list-style: none;
     margin: 0;
     display: flex;
@@ -131,7 +138,6 @@
     justify-content: center;
     gap: 10px;
     padding: 0;
-    height: 100%;
 }
   
 #GH{
@@ -179,45 +185,58 @@
     z-index: 2;
     transition: .1s;
 }
-  
-/* /// Tech icons //// */
-.html{
+ 
+/* ////////////////////////////////  Tech Icons   //////////////////////////////// */
+#html{
     color: crimson;
 }
   
-.css{
+#css{
     color: cornflowerblue;
 }
   
-.js-sq{
-    color: goldenrod;    
+#javascript{
+    color: goldenrod;   
 }
   
-.mdb{
+#mongodb{
     color: forestgreen;
 }
   
-.react{
+#react{
     color: aqua;
 }
+
+#express {
+    color: inherit;
+}
   
-.node{
+#node{
     color: darkorange;
 }
   
-  .heroku {
+#heroku {
     color: purple;
   }
   
-.bootstrap {
+#bootstrap {
     color: darkorchid;
 }
   
-.ps {
+#photoshop {
     color: darkblue;
 }
-  
-/* /// Project icons //// */
+ 
+/* ////////////////////////////////  Project Icons   //////////////////////////////// */
+
+.icon {
+    height: 2rem !important;
+    width: 3rem !important;
+    transition: color .25s !important;
+    &:hover{
+        transition: color .25s !important;
+    }
+}
 #unit3:hover{
     color: #007bff;
     transition: .25s;
@@ -233,52 +252,109 @@
     transition: .25s;
 }
 
-#PBIcon{
-    height: 2rem;
-    width: 3rem;
-}
 
 #PBIcon:hover{
     color: green;
     transition: .25s;
 }
 
-.Link {
-    color: black;
-}
-.Link:hover {
-    color: #686868;
+.Link > .github{
     transition: .25s;
 }
 
-.LinkNight{
-    color: gainsboro;
+.Link-dark-mode > .github{
+    transition: .25s;
 }
 
-.LinkNight:hover{
+.Link > .github:hover{
+    transition: .25s;
+    color: #686868;
+}
+
+.Link-dark-mode > .github:hover{
+    transition: .25s;
+    color: white;
+}
+
+.Link {
     color: black;
+    transition: color 2s;
+}
+.Link:hover {
+    color: #686868;
 }
 
-/* @media (min-width: 768px){
-    .my-projects{
-        margin: 0 auto;
-    }
-} */
+.Link-dark-mode{
+    color: gainsboro;
+    transition: color 2s;
+}
 
-@media (max-width: 768px){
+.Link-dark-mode:hover{
+    color: white;
+    /* transition: .25s; */
+}
+
+
+
+/* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
+@media (max-width: 840px){
     .ProjectsGrid{
         height: 100%;
     }
-}
 
-@media (max-width: 539px){
-    .my-projects{
-        margin: 0 15px 0 15px;
+    .my-projects {
+        height: 950px;
+        height: fit-content;
+    }
+
+    .imgslider {
+        width: 475px;
+    }
+
+    .game-description {
+        width: 445px;
+        height: 850px;
+        height: fit-content;
+    }
+
+    .game-description > p {
+        font-size: 1.5rem;
+        overflow: unset;
+    }
+
+    .slick-slide img {
+        width: 100%;
     }
 }
 
-@media (max-width: 360px){
+/* @media (max-width: 539px){
+    .my-projects{
+        margin: 0 15px 0 15px;
+    }
+} */
+
+@media (max-width: 450px){
+    .ProjectsGrid {
+        grid-template-columns: 350px;
+        margin: 0 auto;
+    }
     .my-projects{
         margin: 0;
+        width: 350px;
+        height: 890px;
+        height: fit-content;
+    }
+    .imgslider {
+        width: 340px;
+    }
+    .game-description {
+        width: 330px;
+        padding: 5px 5px 20px;
+        height: 500px;
+    }
+    .game-description > p {
+        padding: 8px 3px;
+        font-size: 1.1rem;
+        overflow: unset;
     }
 }

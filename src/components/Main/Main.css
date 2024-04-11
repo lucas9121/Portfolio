@@ -1,15 +1,17 @@
 .Main {
   max-width: 1600px;
+  max-width: 115rem;
+  margin: 0 auto;
   padding-top: 20px;
 }
 
 .Main > div {
-  padding: 8rem 3rem;
+  padding: 8rem 3rem 4rem;
   margin: 0;
 }
 
+
+/* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
 @media (max-width: 1250px){
-    .Main > div{
-        padding: 2rem;
-    }
+
 }

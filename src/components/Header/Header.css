@@ -1,4 +1,4 @@
-.Header{
+header{
     position: sticky;
     height: 100%;
     padding: 0 10px;
@@ -9,19 +9,17 @@
     background: url(../../../public/images/software-computer-code-1940x900_35196.jpeg);
     background-size: cover;
     background-repeat: round;
-    z-index: 10;
+    z-index: 2;
 }
 
-#logo{
-  background: url(../../../public/logo.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: clamp(200px, 45vw, 400px);
-  height: clamp(50px, 11vw, 100px);
-  background-color: #ffffff82;
-  color: #fff;
-  border: none;
-  z-index: 1;
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.331); /* Adjust opacity as needed */
+  z-index: 3;
 }
 
 #portrait {
@@ -37,6 +35,9 @@
   cursor: pointer;
   background-color: #ffffff82;
   background-color: #3a83c7bf;
+  &:hover{
+    background-color: #2669a7bf;
+  }
 }
 
 #arrow{
@@ -53,6 +54,7 @@
   position: absolute;
   bottom: 3%;
   cursor: pointer;
+  z-index: 4;
 }
 
 #mouse {
@@ -77,28 +79,34 @@
     animation: scroll-wheel 1.5s infinite;
     -webkit-animation: scroll-wheel 1.5s infinite;
   }
-}
-
-@keyframes scroll-wheel {
-  to {
-    opacity: 0;
-    top: 50px;
+  &:hover{
+    background-color: #e7e7e7;
+    /* transition: inherit; */
   }
 }
 
-@-webkit-keyframes scroll-wheel {
-  to {
-    opacity: 0;
-    top: 27px;
+.show {
+  opacity: 100 !important;
+  transition: opacity 2s;
+  transition-delay: .5s;
+  &:hover{
+    transition: background-color .6s;
   }
 }
 
-.Header > nav {
-  display: none;
+.hide {
+  opacity: 0;
+  transition: opacity .1s;
+  transition-delay: 0s;
+}
+
+
+header > nav {
+  opacity: 0;
   z-index: 1;
 }
 
-.Header > nav > ul {
+header > nav > ul {
   display: flex;
   align-items: center;
   margin: 0;
@@ -118,17 +126,12 @@
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  transition: .3s;
-}
-
-.list > a:hover{
-  color: #3a84c7;
-  border-radius: 50%;
-  transition: .3s;
-}
-
-.list > .night:hover{
-  color: rgb(34 150 243);
+  transition: color .3s;
+  &:hover{
+    color: #3a84c7;
+    border-radius: 50%;
+    transition: color .3s;
+  }
 }
 
 .sticky{
@@ -141,12 +144,12 @@
 
 }
 
-.sticky > #mouse-icon {
-  display: none;
-}
 
 .sticky > nav {
   display: flex;
+  opacity: 100;
+  transition: opacity 2s;
+  transition-delay: .5s;
 }
 
 .sticky > nav > .hamburger {
@@ -165,7 +168,7 @@
 }
 
 
-/* /// Toggle //// */
+/* ////////////////////////////////  Toggle   //////////////////////////////// */
 
 #toggle{
     display: flex;
@@ -199,19 +202,18 @@
   background-color: #fafafa7d;
   -webkit-transition: .4s;
   transition: .4s;
-}
-  
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  right: 3px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    right: 3px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
 }
   
 input:checked + .slider {
@@ -230,23 +232,31 @@ input:checked + .slider:before {
   
 .slider.round {
   border-radius: 34px;
-}
-  
-.slider.round:before {
-  border-radius: 50%;
+  &:before {
+    border-radius: 50%;
+  }
 }
 
-@keyframes downarrow{
-  from{
-    bottom: 35px;
-  }
-  50% {
-    bottom: 10px;
-  }
-  to{
-    bottom: 35px;
+
+
+/* ////////////////////////////////   Animations   //////////////////////////////// */
+@keyframes scroll-wheel {
+  to {
+    opacity: 0;
+    top: 50px;
   }
 }
+
+@-webkit-keyframes scroll-wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}
+  
+
+
+/* ////////////////////////////////   Screen Sizes   //////////////////////////////// */
 
 @media (max-width: 1250px){
 
@@ -264,7 +274,7 @@ input:checked + .slider:before {
     display: none;
   }
 
-  .sticky > nav > .menu {
+  #header-menu {
     position: absolute;
     top: 60px;
     right: 0;
@@ -292,7 +302,17 @@ input:checked + .slider:before {
 }
 
 @media (min-width: 768px) and (max-width: 1250px) {
-  .sticky  #logo {
-    width: 25%;
+}
+
+@media (max-width: 450px) {
+  #portrait {
+    width: 70px;
+    height: 70px;
+  }
+  .sticky > nav {
+    width: 60px;
+  }
+  #header-menu {
+    top: 59px;
   }
 }
