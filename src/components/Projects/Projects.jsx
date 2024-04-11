@@ -24,41 +24,44 @@ export default function Projects(props) {
                         <div className="tech">
                             <div >
                                 <p>HTML</p>
-                                <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                                <AiOutlineHtml5  id='html' className='icon' />
                             </div>
                             <div>
                                 <p>CSS</p>
-                                <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                                <FaCss3Alt  id='css' className='icon' />
                             </div>
                             <div>
                                 <p>JavaScript</p>
-                                <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                                <IoLogoJavascript  id='javascript' className='icon' />
                             </div>
                             <div>
                                 <p>MongoDB</p>
-                                <SiMongodb style={{height: '2rem', width: '3rem'}} className='mdb' />
+                                <SiMongodb  id='mongodb' className='icon' />
                             </div>
                             <div>
                                 <p>ExpressJs</p>
-                                <SiExpress style={{height: '2rem', width: '3rem'}} className='express' />
+                                <SiExpress  id='express' className='icon' />
                             </div>
                             <div>
                                 <p>React</p>
-                                <SiReact style={{height: '2rem', width: '3rem'}} className='react' />
+                                <SiReact  id='react' className='icon' />
                             </div>
                             <div>
                                 <p>NodeJS</p>
-                                <IoLogoNodejs style={{height: '2rem', width: '3rem'}} className='node' />
+                                <IoLogoNodejs  id='node' className='icon' />
                             </div>
                             <div>
                                 <p>Heroku</p>
-                                <SiHeroku style={{height: '2rem', width: '3rem'}} className='heroku' />
+                                <SiHeroku  id='heroku' className='icon' />
                             </div>
                         </div>
-                        <ul>
-                            <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Gamehub" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                            <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://gamehub-react.herokuapp.com/games" target="_blank" rel="noreferrer"><BsJoystick style={{height: '2rem', width: '3rem'}} id='unit3'/></a></li>
-                        </ul>
+                        <div className="project-links-container">
+                            <b>Links</b>
+                            <ul className='project-links'>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://github.com/lucas9121/Gamehub" target="_blank" rel="noreferrer"><BsGithub className="icon github"  /></a></li>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://gamehub-react.herokuapp.com/games" target="_blank" rel="noreferrer"><BsJoystick  id='unit3' className="icon"/></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 <article className="my-projects">
@@ -69,37 +72,40 @@ export default function Projects(props) {
                         <div className="tech">
                             <div>
                                 <p>HTML</p>
-                                <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                                <AiOutlineHtml5  id='html' className='icon' />
                             </div>
                             <div>
                                 <p>CSS</p>
-                                <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                                <FaCss3Alt  id='css' className='icon' />
                             </div>
                             <div>
                                 <p>JavaScript</p>
-                                <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                                <IoLogoJavascript  id='javascript' className='icon' />
                             </div>
                             <div>
                                 <p>MongoDB</p>
-                                <SiMongodb style={{height: '2rem', width: '3rem'}} className='mdb' />
+                                <SiMongodb  id='mongodb' className='icon' />
                             </div>
                             <div>
                                 <p>React</p>
-                                <SiReact style={{height: '2rem', width: '3rem'}} className='react' />
+                                <SiReact  id='react' className='icon' />
                             </div>
                             <div>
                                 <p>NodeJS</p>
-                                <IoLogoNodejs style={{height: '2rem', width: '3rem'}} className='node' />
+                                <IoLogoNodejs  id='node' className='icon' />
                             </div>
                             <div>
                                 <p>Bootstrap</p>
-                                <FaBootstrap style={{height: '2rem', width: '3rem'}} className='bootstrap'/>
+                                <FaBootstrap  id='bootstrap' className='icon'/>
                             </div>
                         </div>
-                        <ul>
-                            <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/favorite-quotes" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                            <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://psych-bite.herokuapp.com/" target="_blank" rel="noreferrer"><FaCoffee id='PBIcon'/></a></li>
-                        </ul>
+                        <div className="project-links-container">
+                            <b>Links</b>
+                            <ul className='project-links'>
+                                <li><a className={props.toggle ? "Link-dark-mode Github" : "Link Github"} href="https://github.com/lucas9121/favorite-quotes" target="_blank" rel="noreferrer"><BsGithub className="icon github"  /></a></li>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://psych-bite.herokuapp.com/" target="_blank" rel="noreferrer"><FaCoffee id='PBIcon' className="icon"/></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 <article className="my-projects">
@@ -110,41 +116,44 @@ export default function Projects(props) {
                         <div className="tech">
                             <div>
                                 <p>HTML</p>
-                                <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                                <AiOutlineHtml5  id='html' className='icon' />
                             </div>
                             <div>
                                 <p>CSS</p>
-                                <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                                <FaCss3Alt  id='css' className='icon' />
                             </div>
                             <div>
                                 <p>JavaScript</p>
-                                <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                                <IoLogoJavascript  id='javascript' className='icon' />
                             </div>
                             <div>
                                 <p>MongoDB</p>
-                                <SiMongodb style={{height: '2rem', width: '3rem'}} className='mdb' />
+                                <SiMongodb  id='mongodb' className='icon' />
                             </div>
                             <div>
                                 <p>Google API</p>
-                                <FcGoogle style={{height: '2rem', width: '3rem'}} className='google'/>
+                                <FcGoogle  id='google' className='icon'/>
                             </div>
                             <div>
                                 <p>React</p>
-                                <SiReact style={{height: '2rem', width: '3rem'}} className='react' />
+                                <SiReact  id='react' className='icon' />
                             </div>
                             <div>
                                 <p>NodeJS</p>
-                                <IoLogoNodejs style={{height: '2rem', width: '3rem'}} className='node' />
+                                <IoLogoNodejs  id='node' className='icon' />
                             </div>
                             <div>
                                 <p>Bootstrap</p>
-                                <FaBootstrap style={{height: '2rem', width: '3rem'}} className='bootstrap'/>
+                                <FaBootstrap  id='bootstrap' className='icon'/>
                             </div>
                         </div>
-                        <ul>
-                            <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                            <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank" rel="noreferrer"><FaTruck style={{height: '2rem', width: '3rem'}} id='unit4'/></a></li>
-                        </ul>
+                        <div className="project-links-container">
+                            <b>Links</b>
+                            <ul className='project-links'>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://github.com/lucas9121/roaming-food-trucks" target="_blank" rel="noreferrer"><BsGithub className="icon github"  /></a></li>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://roaming-spoon.herokuapp.com/" target="_blank" rel="noreferrer"><FaTruck className="icon"  id='unit4'/></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 <article className="my-projects">
@@ -155,25 +164,28 @@ export default function Projects(props) {
                         <div className="tech">
                             <div>
                                 <p>HTML</p>
-                                <AiOutlineHtml5 style={{height: '2rem', width: '3rem'}} className='html' />
+                                <AiOutlineHtml5  id='html' className='icon' />
                             </div>
                             <div>
                                 <p>CSS</p>
-                                <FaCss3Alt style={{height: '2rem', width: '3rem'}} className='css' />
+                                <FaCss3Alt  id='css' className='icon' />
                             </div>
                             <div>
                                 <p>JavaScript</p>
-                                <IoLogoJavascript style={{height: '2rem', width: '3rem'}} className='js-sq' />
+                                <IoLogoJavascript  id='javascript' className='icon' />
                             </div>
                             <div>
                                 <p>Photoshop</p>
-                                <SiAdobephotoshop style={{height: '2rem', width: '3rem'}} className='ps'/>
+                                <SiAdobephotoshop  id='photoshop' className='icon'/>
                             </div>
                         </div>
-                        <ul>
-                            <li><a className={props.toggle ? "LinkNight Github" : "Link Github"} href="https://github.com/lucas9121/Wars-of-Vogrora" target="_blank" rel="noreferrer"><BsGithub  style={{height: '2rem', width: '3rem'}}/></a></li>
-                            <li><a className={props.toggle ? "LinkNight" : "Link"} href="https://lucas9121.github.io/Wars-of-Vogrora/" target="_blank" rel="noreferrer"><FaDungeon style={{height: '2rem', width: '3rem'}} id='unit1'/></a></li>
-                        </ul>
+                        <div className="project-links-container">
+                            <b>Links</b>
+                            <ul className='project-links'>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://github.com/lucas9121/Wars-of-Vogrora" target="_blank" rel="noreferrer"><BsGithub className="icon github"  /></a></li>
+                                <li><a className={props.toggle ? "Link-dark-mode" : "Link"} href="https://lucas9121.github.io/Wars-of-Vogrora/" target="_blank" rel="noreferrer"><FaDungeon className="icon"  id='unit1'/></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
                 {/* <img src='/images/GH/GH2.png' /> */}
