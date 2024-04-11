@@ -15,9 +15,7 @@ export default function ImageSlider({images}) {
     };
 
     const optimizeImage = (imageUrl) => {
-        // Example: Resize and compress the image
-        const optimizedUrl = imageUrl + "?w=530&h=400&q=80"; // Adjust dimensions and quality as needed
-        console.log(optimizedUrl)
+        const optimizedUrl = imageUrl + "?w=530&h=400&q=80";
         return optimizedUrl;
     };
 
