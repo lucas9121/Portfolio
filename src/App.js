@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
         sticky={sticky}
         setSticky={setSticky}
       />
+      <Home sticky={sticky} />
       <section className={toggle ? "content-section content-section-dark" : "content-section"}>
           <Main toggle={toggle} />
           <Footer toggle={toggle} />
