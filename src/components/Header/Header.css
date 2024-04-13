@@ -250,7 +250,7 @@ input:checked + .slider:before {
 @-webkit-keyframes scroll-wheel {
   to {
     opacity: 0;
-    top: 27px;
+    top: 50px;
   }
 }
   
@@ -309,10 +309,35 @@ input:checked + .slider:before {
     width: 70px;
     height: 70px;
   }
+
   .sticky > nav {
     width: 60px;
   }
+
   #header-menu {
     top: 59px;
+  }
+
+  #mouse-icon {
+    bottom: 10%;
+  }
+
+  #mouse {
+    width: 20px;
+    height: 40px;
+  }
+  
+  @keyframes scroll-wheel {
+    to {
+      opacity: 0;
+      top: 30px;
+    }
+  }
+  
+  @-webkit-keyframes scroll-wheel {
+    to {
+      opacity: 0;
+      top: 30px;
+    }
   }
 }
