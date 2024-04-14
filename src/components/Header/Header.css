@@ -326,6 +326,10 @@ input:checked + .slider:before {
     width: 20px;
     height: 40px;
   }
+
+  .sticky {
+    padding: 1rem;
+  }
   
   @keyframes scroll-wheel {
     to {
