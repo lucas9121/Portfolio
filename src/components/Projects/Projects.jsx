@@ -1,27 +1,32 @@
 import React from 'react';
 import "./Projects.css"
+import { useState } from 'react';
 import { BsGithub, BsJoystick } from 'react-icons/bs';
-import { AiOutlineHtml5 } from 'react-icons/ai';
-import { FaCss3Alt, FaBootstrap, FaTruck, FaDungeon, FaCoffee, FaExternalLinkAlt } from 'react-icons/fa';
-import { IoLogoJavascript, IoLogoNodejs } from 'react-icons/io';
-import { SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop } from 'react-icons/si';
+import { FaCss3Alt, FaBootstrap, FaTruck, FaDungeon, FaCoffee, FaExternalLinkAlt, FaHtml5, FaNodeJs, FaGitAlt } from 'react-icons/fa';
+import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
+import { SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop, SiExpo } from 'react-icons/si';
+import { TbBrandReactNative } from "react-icons/tb";
 import { FcGoogle } from 'react-icons/fc';
 import ImageSlider from '../ImageSlider';
 import { myProject } from './MyProjects'; 
 
 
 const techIcons = {
-    html: AiOutlineHtml5,
+    html: FaHtml5,
     css: FaCss3Alt,
     javascript: IoLogoJavascript,
     mongodb: SiMongodb,
     expressjs: SiExpress,
     react: SiReact,
-    nodejs: IoLogoNodejs,
+    reactnative: TbBrandReactNative,
+    nodejs: FaNodeJs,
     heroku: SiHeroku,
     bootstrap: FaBootstrap,
     photoshop: SiAdobephotoshop,
-    google: FcGoogle
+    google: FcGoogle,
+    expo: SiExpo,
+    firebase: IoLogoFirebase,
+    git: FaGitAlt,
 };
 
 const externalLinkIcons = {
@@ -31,7 +36,7 @@ const externalLinkIcons = {
     coffee: FaCoffee
 }
 
-export default function Projects(props) {
+const Projects = (props) => {
     return (
         <div id="Projects" className={props.toggle ? "project-container dark" : "project-container"}>
             <h2 className={props.toggle ? 'dark-mode' : ''}>My Projects</h2>
@@ -39,6 +44,7 @@ export default function Projects(props) {
                 {myProject.map((project, index) => {
                     const ExternalIcon = externalLinkIcons[project.projectIcon.trim().toLocaleLowerCase()]
                     const iconCssId = project.name.trim().toLocaleLowerCase().replace(/\s/g, '') + "-icon"
+                    let iconsCount = 0
                     return(
                         <article key={index} className="my-projects">
                             <ImageSlider images={project.images} />
@@ -50,12 +56,14 @@ export default function Projects(props) {
                                 </p>
                                 <div className="tech">
                                     {project.tech.split(',').map((tech, i) => {
-                                        const Icon = techIcons[tech.trim().toLowerCase()];
+                                        if( iconsCount > 7) return
+                                        const Icon = techIcons[tech.trim().replace(/\s/g, '').toLowerCase()];
                                         if (Icon) {
+                                            iconsCount++
                                             return (
                                                 <div key={i}>
                                                     <p>{tech}</p>
-                                                    <Icon id={`${tech.trim().toLowerCase()}`} className='icon' />
+                                                    <Icon id={`${tech.trim().replace(/\s/g, '').toLowerCase()}`} className='icon' />
                                                 </div>
                                             );
                                         }
@@ -65,8 +73,8 @@ export default function Projects(props) {
                                 <div className="project-links-container">
                                     <b>Links</b>
                                     <ul className='project-links'>
-                                        <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.projectLink} target="_blank" rel="noreferrer"><BsGithub className="icon github" /></a></li>
-                                        <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.liveLink} target="_blank" rel="noreferrer">{project.projectIcon ? <ExternalIcon id={iconCssId} className={`icon`} /> : <FaExternalLinkAlt className='icon external-link' /> }</a></li>
+                                        {project.projectLink && <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.projectLink} target="_blank" rel="noreferrer"><BsGithub className="icon github" /></a></li>}
+                                        {project.liveLink && <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.liveLink} target="_blank" rel="noreferrer">{project.projectIcon ? <ExternalIcon id={iconCssId} className={`icon`} /> : <FaExternalLinkAlt className='icon external-link' /> }</a></li>}
                                     </ul>
                                 </div>
                             </div>
@@ -77,3 +85,5 @@ export default function Projects(props) {
         </div>
     )
 }
+
+export default React.memo(Projects)
