@@ -39,7 +39,7 @@ export const myProject = [
   },
   {
     name: "Psych Byte",
-    summary: "Psych Bite is an application that sends an email every morning based off 3 authors revolving around finance, psychology and faith. People can add their email on the website to receive one adn unsubscribe in the link on the email.",
+    summary: "Psych Byte is a unique application designed to provide users with a daily dose of inspiration and insight from notable authors in the fields of finance, psychology, and faith. Developed in collaboration with another developer, my role as a backend developer focused on building the server-side and subscription management. This service delivers a random quote to subscribers' email inboxes every morning at 7 am. With Psych Byte, users can kickstart their day with a bite of knowledge and motivation.",
     description: "",
     tech: "MongoDB, React, NodeJS, ExpressJS, Nodemailer, Git, Heroku",
     projectIcon: "coffee",
