@@ -70,3 +70,28 @@ footer > p {
     border-top: solid 1px;
     width: 91vw;
 }
+
+
+/* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
+@media (max-width: 450px){
+  footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+  
+  .footer-container > h2 {
+    text-align: center;
+  }
+
+  .footer-container > h4 {
+    text-align: center;
+  }
+
+  .footer-container > ul {
+    justify-content: center;
+  }
+
+  .footer-lower {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+}
