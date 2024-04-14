@@ -144,7 +144,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 10px;
     padding: 20px 0 5px 0;
 }
@@ -173,11 +173,11 @@
  
 /* ////////////////////////////////  Tech Icons   //////////////////////////////// */
 #html{
-    color: crimson;
+    color: #f85521;
 }
   
 #css{
-    color: cornflowerblue;
+    color: #146fb1;
 }
   
 #javascript{
@@ -188,16 +188,20 @@
     color: forestgreen;
 }
   
-#react{
-    color: aqua;
+#react {
+    color: #61dafb;
 }
 
-#express {
+#reactnative {
+    color: #61dafb;
+}
+
+#expressjs {
     color: inherit;
 }
   
-#node{
-    color: darkorange;
+#nodejs{
+    color: #6aa05b;
 }
   
 #heroku {
@@ -205,11 +209,23 @@
   }
   
 #bootstrap {
-    color: darkorchid;
+    color: #700ff4;
 }
   
 #photoshop {
-    color: darkblue;
+    color: #021c32;
+}
+
+#expo {
+    color: black;
+}
+
+#firebase {
+    color: #eb780b;
+}
+
+#git {
+    color: #ea4e32;
 }
  
 /* ////////////////////////////////  Project Icons   //////////////////////////////// */
@@ -356,5 +372,9 @@
     }
     .summary span {
         font-size: 2.5rem;
+    }
+    .icon {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
     }
 }
