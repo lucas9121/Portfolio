@@ -16,30 +16,12 @@
 .dark-mode{
     color: gainsboro !important;
 }
-.ProjectsGrid {
+.projects-grid {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
     gap: 20px 0;
     align-items: center;
-}
-
-.ProjectsGrid::-webkit-scrollbar {
-    width: 5px;
-}
-
-.ProjectsGrid::-webkit-scrollbar-track{
-    display: none;
-}
-
-.ProjectsGrid::-webkit-scrollbar-thumb{
-    background: black;
-    border-radius: 10px;
-}
-
-.nightMode::-webkit-scrollbar-thumb{
-    background: gainsboro;
-    border-radius: 10px;
 }
   
 .my-projects{
@@ -101,8 +83,7 @@
     margin-bottom: 0;
     margin-top: 1rem;
     flex: 1;
-    color: black;
-    transition: color 2s;
+    color: inherit;
 }
   
 .game-description > p{
@@ -138,6 +119,10 @@
     justify-content: center;
     gap: 10px;
     padding: 0;
+}
+
+.summary span {
+  font-size: 3rem; 
 }
   
 #GH{
@@ -237,59 +222,77 @@
         transition: color .25s !important;
     }
 }
-#unit3:hover{
+#gamehub-icon:hover{
     color: #007bff;
     transition: .25s;
 }
   
-#unit4:hover{
+#roamingspoon-icon:hover{
     color: #f2782f;
     transition: .25s;
 }
   
-#unit1:hover{
+#warsofvolgrora-icon:hover{
     color: red;
     transition: .25s;
 }
 
 
-#PBIcon:hover{
+#psychbyte-icon:hover{
     color: green;
+    /* transition: .25s; */
+}
+
+.link > .github{
     transition: .25s;
 }
 
-.Link > .github{
+.link-dark-mode > .github{
     transition: .25s;
 }
 
-.Link-dark-mode > .github{
-    transition: .25s;
-}
-
-.Link > .github:hover{
+.link > .github:hover{
     transition: .25s;
     color: #686868;
 }
 
-.Link-dark-mode > .github:hover{
+.link-dark-mode > .github:hover{
     transition: .25s;
     color: white;
 }
 
-.Link {
-    color: black;
-    transition: color 2s;
+.link > .external-link{
+    transition: .25s;
 }
-.Link:hover {
+
+.link-dark-mode > .external-link{
+    transition: .25s;
+}
+
+.link > .external-link:hover{
+    transition: .25s;
     color: #686868;
 }
 
-.Link-dark-mode{
+.link-dark-mode > .external-link:hover{
+    transition: .25s;
+    color: white;
+}
+
+.link {
+    color: black;
+    transition: color 2s;
+}
+.link:hover {
+    color: #686868;
+}
+
+.link-dark-mode{
     color: gainsboro;
     transition: color 2s;
 }
 
-.Link-dark-mode:hover{
+.link-dark-mode:hover{
     color: white;
     /* transition: .25s; */
 }
@@ -298,7 +301,7 @@
 
 /* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
 @media (max-width: 840px){
-    .ProjectsGrid{
+    .projects-grid{
         height: 100%;
     }
 
@@ -327,14 +330,8 @@
     }
 }
 
-/* @media (max-width: 539px){
-    .my-projects{
-        margin: 0 15px 0 15px;
-    }
-} */
-
 @media (max-width: 450px){
-    .ProjectsGrid {
+    .projects-grid {
         grid-template-columns: 350px;
         margin: 0 auto;
     }
@@ -356,5 +353,8 @@
         padding: 8px 3px;
         font-size: 1.1rem;
         overflow: unset;
+    }
+    .summary span {
+        font-size: 2.5rem;
     }
 }
