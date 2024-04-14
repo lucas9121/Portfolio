@@ -95,6 +95,9 @@
 }
 
 @media (max-width: 450px){
+    #About-description > div > p {
+        font-weight: normal;
+    }
     .about-title{
         text-align: center;
     }
