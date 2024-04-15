@@ -342,22 +342,23 @@
     }
 
     .slick-slide img {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
 @media (max-width: 450px){
     .projects-grid {
-        grid-template-columns: 350px;
+        grid-template-columns: 380px;
         margin: 0 auto;
     }
     .my-projects{
-        margin: 0;
+        margin: 0 auto;
         width: 350px;
         height: 890px;
         height: fit-content;
     }
     .imgslider {
+        height: 250px;
         width: 340px;
     }
     .game-description {
@@ -373,8 +374,24 @@
     .summary span {
         font-size: 2.5rem;
     }
+    .slick-slide img {
+        height: 250px !important;
+        width: 340px !important;
+    }
     .icon {
         height: 1.5rem !important;
         width: 1.5rem !important;
+    }
+}
+
+@media (max-width: 391px){
+    .projects-grid {
+        grid-template-columns: 360px;
+    }
+}
+
+@media (max-width: 380px){
+    .projects-grid {
+        grid-template-columns: 350px;
     }
 }
