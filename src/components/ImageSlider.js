@@ -15,7 +15,7 @@ export default function ImageSlider({images}) {
     };
 
     const optimizeImage = (imageUrl) => {
-        const optimizedUrl = imageUrl + "?w=530&h=400&q=80";
+        const optimizedUrl = imageUrl + "?w=530&h=400&q=85";
         return optimizedUrl;
     };
 
