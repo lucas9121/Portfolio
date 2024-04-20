@@ -8,7 +8,7 @@ const myProjectsData = {
       "tech": "HTML, CSS, JavaScript, React, MongoDB, ExpressJS, NodeJS, Heroku, Git",
       "projectIcon": "game",
       "projectLink": 'https://github.com/lucas9121/Gamehub',
-      "livetLink": 'https://gamehub-react.herokuapp.com/games',
+      "liveLink": 'https://gamehub-react.herokuapp.com/games',
       "color": '#007bff',
       "images": [
         {
@@ -45,7 +45,7 @@ const myProjectsData = {
       "tech": "MongoDB, React, NodeJS, ExpressJS, Nodemailer, Git, Heroku",
       "projectIcon": "coffee",
       "projectLink": "https://github.com/lucas9121/favorite-quotes",
-      "livetLink": "https://psych-bite.herokuapp.com/",
+      "liveLink": "https://psych-bite.herokuapp.com/",
       "color": "green",
       "images": [
         {
@@ -77,7 +77,7 @@ const myProjectsData = {
     //   "tech": "HTML, CSS, JavaScript, React Native, Expo, Firebase, Git",
     //   "projectIcon": "",
     //   "projectLink": "https://github.com/lucas9121/MealsToGo",
-    //   "livetLink": "",
+    //   "liveLink": "",
     //   "color": "#2182BD",
     //   "images": [],
     // },
@@ -88,7 +88,7 @@ const myProjectsData = {
       "tech": "HTML, CSS, JavaScript, Google, React, Bootstrap, NodeJS, MongoDB, Git, Heroku",
       "projectIcon": "truck",
       "projectLink": "https://github.com/lucas9121/roaming-food-trucks",
-      "livetLink": "https://roaming-spoon.herokuapp.com/",
+      "liveLink": "https://roaming-spoon.herokuapp.com/",
       "color": "#f2782f",
       "images": [
         {
@@ -125,7 +125,7 @@ const myProjectsData = {
       "tech": "HTML, CSS, JavaScript, Photoshop",
       "projectIcon": "door",
       "projectLink": "https://github.com/lucas9121/Wars-of-Vogrora",
-      "livetLink": "https://lucas9121.github.io/Wars-of-Vogrora/",
+      "liveLink": "https://lucas9121.github.io/Wars-of-Vogrora/",
       "color": "red",
       "images": [
         {
@@ -162,7 +162,7 @@ const myProjectsData = {
     //   "tech": "",
     //   "projectIcon": "",
     //   "projectLink": "",
-    //   "livetLink": "",
+    //   "liveLink": "",
     //   "color": "",
     //   "images": [],
     // },
