@@ -33,7 +33,8 @@ const externalLinkIcons = {
     game: BsJoystick,
     truck: FaTruck,
     door: FaDungeon,
-    coffee: FaCoffee
+    coffee: FaCoffee,
+    none: FaExternalLinkAlt
 }
 
 const Projects = (props) => {
@@ -42,8 +43,9 @@ const Projects = (props) => {
             <h2 className={props.toggle ? 'dark-mode' : ''}>My Projects</h2>
             <div className="projects-grid">
                 {myProject.map((project, index) => {
-                    const ExternalIcon = externalLinkIcons[project.projectIcon.trim().toLocaleLowerCase()]
-                    const iconCssId = project.name.trim().toLocaleLowerCase().replace(/\s/g, '') + "-icon"
+                    const iconName = project.projectIcon.trim().toLocaleLowerCase()
+                    const ExternalIcon = externalLinkIcons[iconName]
+                    const iconCssId = iconName === 'none' ? 'external-icon' : project.name.trim().toLocaleLowerCase().replace(/\s/g, '') + "-icon"
                     let iconsCount = 0
                     return(
                         <article key={index} className="my-projects">
@@ -74,7 +76,7 @@ const Projects = (props) => {
                                     <b>Links</b>
                                     <ul className='project-links'>
                                         {project.projectLink && <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.projectLink} target="_blank" rel="noreferrer"><BsGithub className="icon github" /></a></li>}
-                                        {project.liveLink && <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.liveLink} target="_blank" rel="noreferrer">{project.projectIcon ? <ExternalIcon id={iconCssId} className={`icon`} /> : <FaExternalLinkAlt className='icon external-link' /> }</a></li>}
+                                        {project.liveLink && <li><a className={props.toggle ? "link-dark-mode" : "link"} href={project.liveLink} target="_blank" rel="noreferrer"><ExternalIcon id={iconCssId} className={`icon`} /></a></li>}
                                     </ul>
                                 </div>
                             </div>
