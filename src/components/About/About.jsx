@@ -2,7 +2,7 @@ import './About.css'
 
 export default function About({toggle}){
     return(
-        <div id="About">
+        <div id="About" className={toggle ? 'dark' : "light"}>
             <h2 className={toggle ? 'dark-mode' : ""}>About me</h2>
             <article id="AboutMe">
                 <div id="About-description">
