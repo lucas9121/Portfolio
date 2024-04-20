@@ -75,7 +75,7 @@ footer > p {
 /* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
 @media (max-width: 450px){
   footer {
-    padding: 2rem 1rem 1.5rem;
+    padding: 2rem 1rem 4rem;
   }
   
   .footer-container > h2 {
