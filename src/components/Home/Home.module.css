@@ -11,6 +11,8 @@
   pointer-events: none;
   opacity: 100;
   transition: opacity 2s;
+  min-width: 806px;
+  width: 60%;
 }
 
 .homeHero > h1 {
@@ -38,9 +40,14 @@
 
 /* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
 @media (max-width: 450px){
+  .homeHero{
+    width: 90%;
+  }
+
   .homeHero > h1 {
     font-size: 2.5em;
   }
+  
   .homeHeroInfo > p {
     font-size: 1rem;
   }
