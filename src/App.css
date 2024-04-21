@@ -2,16 +2,8 @@
   text-align: center;
   height: 100vh;
   background: #fafafaeb;
-  /* background: radial-gradient(
-    at 95% 15%,
-    deepskyblue,
-    deepskyblue,
-    deepskyblue,
-    deepskyblue,
-    deepskyblue,
-    #a6a6a6
-  ); */
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -22,9 +14,15 @@
   display: none;
 }
 
+.AppNight {
+  color: white;
+  background: #282828;
+}
+
 .content-section {
   height: calc(101vh - (80px + 2rem));
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -37,10 +35,6 @@
 }
 
 
-.AppNight {
-  color: white;
-  background: #282828;
-}
 
 .content-section-dark {
   color: gainsboro;
