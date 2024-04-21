@@ -1,8 +1,10 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
+import CaseStudy from "./components/CaseStudy/CaseStudy";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -18,7 +20,6 @@ export default function App() {
 
   const handleScroll = (evt) => {
     const scrollTop = evt.currentTarget.scrollTop;
-    // console.log(scrollTop)
     if (scrollTop > 0) {
       setSticky(true);
     } else {
@@ -43,9 +44,11 @@ export default function App() {
       />
       <Home sticky={sticky} />
       <section className={toggle ? "content-section content-section-dark" : "content-section"}>
-          <Main toggle={toggle} />
+        <Routes>
+          <Route path="/" element={<Main toggle={toggle} />} />
+          <Route path="/case-study/:name" element={<CaseStudy setSticky={setSticky} />} />
+        </Routes>
           <Footer toggle={toggle} />
-
       </section>
     </div>
   );
