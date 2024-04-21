@@ -19,7 +19,7 @@ export default function About({toggle}){
                         </p>
                     </div>
                     <div id="skills">
-                        <h3 className={toggle ? 'about-title dark-mode' :'about-title'}>My Skills</h3>
+                        <h3 className={toggle ? 'about-title dark-mode' :'about-title'}>Skills</h3>
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
