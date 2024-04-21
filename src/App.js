@@ -46,7 +46,7 @@ export default function App() {
       <section className={toggle ? "content-section content-section-dark" : "content-section"}>
         <Routes>
           <Route path="/" element={<Main toggle={toggle} />} />
-          <Route path="/case-study/:name" element={<CaseStudy setSticky={setSticky} />} />
+          <Route path="/case-study/:name" element={<CaseStudy toggle={toggle} />} />
         </Routes>
           <Footer toggle={toggle} />
       </section>
