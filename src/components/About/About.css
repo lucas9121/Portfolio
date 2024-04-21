@@ -12,7 +12,9 @@
 
 #About {
     background: linear-gradient(to right, var(--first), var(--second)), url(/public/images/backgroundPattern.jpg);
-    animation: none
+    animation: none;
+    padding: 8em 0 8rem 0;
+    margin: 0;
 }
 
 #About.dark{
@@ -37,14 +39,14 @@
 
 #AboutMe{
     display: flex;
-    padding: 10px 0 20px 0;
+    padding: 10px;
     gap: 10px;
 }
 
 #About-description {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem;
+    grid-gap: 8rem;
 }
 
 #About-description > div{
@@ -141,11 +143,32 @@
     }
 }
 
+
 @media (max-width: 450px){
+    #About {
+        padding: 6rem 0 6rem 0;
+    }
+
     #About-description > div > p {
         font-weight: normal;
     }
+
     .about-title{
         text-align: center;
+    }
+
+    #skills > ul {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 282px) {
+    #About-description > div > p {
+        font-size: 1rem;
+    }
+
+    #skills > ul > li {
+        font-size: 0.8rem;
     }
 }
