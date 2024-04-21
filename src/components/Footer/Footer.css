@@ -1,5 +1,13 @@
+@property --fog {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 4%;
+}
+
+
 footer{
     background: black;
+    background: radial-gradient(black var(--fog), transparent);
     padding: 4rem 1.5rem 2rem;
     display: flex;
     align-items: center;
@@ -7,6 +15,10 @@ footer{
     position: relative;
     z-index: 2;
     color: white;
+    animation: addFog 2s ease forwards;
+    &:hover {
+        animation: removeFog 2s ease forwards;
+    }
 }
 
 footer > p {
@@ -71,8 +83,35 @@ footer > p {
     width: 91vw;
 }
 
+@keyframes removeFog {
+    from{
+        --fog: 4%
+    }
+    to{
+        --fog: 95%
+    }
+}
+
+@keyframes addFog {
+    from{
+        --fog: 95%
+    }
+    to{
+        --fog: 4%
+    }
+}
+
 
 /* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
+@media (max-width: 1280px){
+    footer {
+        background: black;
+        animation: none;
+        &:hover{
+            animation: none;
+        }
+    }
+}
 @media (max-width: 450px){
   footer {
     padding: 2rem 1rem 4rem;
