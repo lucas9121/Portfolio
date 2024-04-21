@@ -6,7 +6,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 export default function Headers({toggle, setToggle, sticky, setSticky}) {
     const [show, setShow] = useState(false)
     const location = useLocation()
-    const navigate = useNavigate()
 
     const handleScrollToTop = () => {
         document.querySelector(".content-section").scrollTo(0, 0)
@@ -28,8 +27,6 @@ export default function Headers({toggle, setToggle, sticky, setSticky}) {
     }
 
     const isCaseStudyPage = () => {
-        console.log("case study function")
-        console.log(location.pathname.startsWith('/case-study'))
         return location.pathname.startsWith('/case-study')
     }
 
