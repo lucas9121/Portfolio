@@ -4,7 +4,7 @@ import "./Main.css";
 
 export default function Main({ toggle }) {
   return (
-    <main className={toggle ? "Main MainNight" : "Main"}>
+    <main className="Main">
       <About toggle={toggle} />
       <Projects toggle={toggle} />
     </main>
