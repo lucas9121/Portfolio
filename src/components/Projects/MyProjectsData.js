@@ -13,27 +13,27 @@ const myProjectsData = {
       "images": [
         {
           id: 1,
-          src: "/images/GH/GH1.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/GH1.png",
           alt: "Gamehub image 1"
         },
         {
           id: 2,
-          src: "/images/GH/GH2.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/GH2.png",
           alt: "Gamehub image 2"
         },
         {
           id: 3,
-          src: "/images/GH/GH3.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/GH3.png",
           alt: "Gamehub image 3"
         },
         {
           id: 4,
-          src: "/images/GH/GH8.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/GH8.png",
           alt: "Gamehub image 8"
         },
         {
           id: 5,
-          src: "/images/GH/GH9.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/GH9.png",
           alt: "Gamehub image 5"
         }
       ],
@@ -50,22 +50,22 @@ const myProjectsData = {
       "images": [
         {
           id: 1,
-          src: "/images/PB/PB1.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/PB1.png",
           alt: "Psych bite image 1"
         },
         {
           id: 2,
-          src: "/images/PB/PB2.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/PB2.png",
           alt: "Psych bite image 2"
         },
         {
           id: 3,
-          src: "/images/PB/PB3.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/PB3.png",
           alt: "Psych bite image 3"
         },
         {
           id: 4,
-          src: "/images/PB/PB4.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/PB4.png",
           alt: "Psych bite image 4"
         }
     ]
@@ -93,27 +93,27 @@ const myProjectsData = {
       "images": [
         {
           id: 1,
-          src: "/images/RFT/RFT1.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/RFT1.png",
           alt: "Roaming Spoon image 1"
         },
         {
           id: 2,
-          src: "/images/RFT/RFT2.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/RFT2.png",
           alt: "Roaming Spoon image 2"
         },
         {
           id: 3,
-          src: "/images/RFT/RFT3.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/RFT3.png",
           alt: "Roaming Spoon image 3"
         },
         {
           id: 4,
-          src: "/images/RFT/RFT4.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/RFT4.png",
           alt: "Roaming Spoon image 4"
         },
         {
           id: 5,
-          src: "/images/RFT/RFT5.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/RFT5.png",
           alt: "Roaming Spoon image 5"
         },
       ],
@@ -130,27 +130,27 @@ const myProjectsData = {
       "images": [
         {
           id: 1,
-          src: "/images/WOV/WOV1.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/WOV1.png",
           alt: "Wars of Vogrora image 1"
         },
         {
           id: 2,
-          src: "/images/WOV/WOV2.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/WOV2.png",
           alt: "Wars of Vogrora image 2"
         },
         {
           id: 3,
-          src: "/images/WOV/WOV3.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/WOV3.png",
           alt: "Wars of Vogrora image 3"
         },
         {
           id: 4,
-          src: "/images/WOV/WOV4.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/WOV4.png",
           alt: "Wars of Vogrora image 4"
         },
         {
           id: 5,
-          src: "/images/WOV/WOV5.png",
+          src: "https://res.cloudinary.com/ddyquau0x/image/upload/v1712802778/Portfolio/WOV5.png",
           alt: "Wars of Vogrora image 5"
         },
       ],
