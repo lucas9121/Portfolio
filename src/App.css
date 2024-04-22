@@ -19,23 +19,3 @@
   background: #282828;
 }
 
-.content-section {
-  height: calc(101vh - (80px + 2rem));
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  color: #3c3c3ce3;
-}
-
-
-.content-section::-webkit-scrollbar {
-  display: none;
-}
-
-
-
-.content-section-dark {
-  color: gainsboro;
-}
