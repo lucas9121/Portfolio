@@ -1,8 +1,7 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
 import { useState, useEffect } from "react";
@@ -10,6 +9,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [toggle, setToggle] = useState(false);
   const [sticky, setSticky] = useState(false);
+  const [isClicked, setIsClicked] = useState(false)
 
 
   useEffect(() => {
@@ -41,15 +41,13 @@ export default function App() {
         setToggle={setToggle}
         sticky={sticky}
         setSticky={setSticky}
+        setIsClicked={setIsClicked}
       />
       <Home sticky={sticky} />
-      <section className={toggle ? "content-section content-section-dark" : "content-section"}>
-        <Routes>
-          <Route path="/" element={<Main toggle={toggle} />} />
-          <Route path="/case-study/:name" element={<CaseStudy toggle={toggle} />} />
-        </Routes>
-          <Footer toggle={toggle} />
-      </section>
+      <Routes>
+        <Route path="/" element={<Main toggle={toggle} isClicked={isClicked} />} />
+        <Route path="/case-study/:name" element={<CaseStudy toggle={toggle} isClicked={isClicked} />} />
+      </Routes>
     </div>
   );
 }
