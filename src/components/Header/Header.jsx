@@ -1,9 +1,9 @@
 import { BiMenu } from 'react-icons/bi';
 import "./Header.css";
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Headers({toggle, setToggle, sticky, setSticky}) {
+export default function Headers({toggle, setToggle, sticky, setSticky, setIsClicked}) {
     const [show, setShow] = useState(false)
     const location = useLocation()
 
@@ -39,18 +39,18 @@ export default function Headers({toggle, setToggle, sticky, setSticky}) {
                 <BiMenu className='hamburger' onClick={() => {setShow(!show)}} />
                 <ul id={show ? "header-menu" : ""}>
                     {isCaseStudyPage() ?
-                        <li className='list'><Link to="/" onClick={() => {setShow(false)}}>Home</Link></li>
+                        <li className='list'><Link className='header-link' onClick={() => {setShow(false); setIsClicked(true)}} to="/">Home</Link></li>
                         :
                         <>
-                            <li className='list'><Link to="/" onClick={() => {setShow(false); scrollToSection("About")}}>About</Link></li>
-                            <li className='list'><Link to="/" onClick={() => {setShow(false); scrollToSection("Projects")}}>Projects</Link></li>
+                            <li className='list'><Link className='header-link' to="/" onClick={() => {setShow(false); scrollToSection("About")}}>About</Link></li>
+                            <li className='list'><Link className='header-link' to="/" onClick={() => {setShow(false); scrollToSection("Projects")}}>Projects</Link></li>
                         </>
                     }
-                    <li className='list'><a href="mailto:lucas2carlos@gmail.com" target="_blank" rel="noreferrer" onClick={() => {setShow(false)}}>Contact me</a></li>
+                    <li className='list'><a className='header-link' href="mailto:lucas2carlos@gmail.com" target="_blank" rel="noreferrer" onClick={() => {setShow(false)}}>Contact me</a></li>
                     <li className='list' style={{height: '100%'}}>
                         <div id="toggle">
                             <label className="switch" onClick={() => {setShow(false)}}>
-                                <input type="checkbox" onClick={() => {setToggle(!toggle)}} />
+                                <input type="checkbox" onClick={() => {setToggle(!toggle); setIsClicked(false)}} />
                                 <span className="slider round"></span>
                             </label>
                         </div>
