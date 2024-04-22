@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import React from "react";
 
+
 export default function ImageSlider({images}) {
     const settings = {
         infinite: true,
@@ -14,9 +15,18 @@ export default function ImageSlider({images}) {
         autoplaySpeed: 2000
     };
 
+    
     const optimizeImage = (imageUrl) => {
-        const optimizedUrl = imageUrl + "?w=530&h=400&q=85";
-        return optimizedUrl;
+        // Extract the part of the URL after the "upload/" segment
+        const urlParts = imageUrl.split("/upload/");
+
+        // Image wasn't stored in cloudinary
+        if(urlParts.length === 1) return imageUrl
+        
+        // Add the width and height parameters to the URL
+        const transformedUrl = `${urlParts[0]}/upload/w_530,h_400/${urlParts[1]}`;
+    
+        return transformedUrl;
     };
 
     return(
