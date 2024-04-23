@@ -125,7 +125,7 @@ const myProjectsData = {
       "tech": "HTML, CSS, JavaScript, Photoshop",
       "projectIcon": "door",
       "projectLink": "https://github.com/lucas9121/Wars-of-Vogrora",
-      "liveLink": "https://lucas9121.github.io/Wars-of-Vogrora/",
+      "liveLink": "https://warsofvogrora.netlify.app/",
       "color": "red",
       "images": [
         {
