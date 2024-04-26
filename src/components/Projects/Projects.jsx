@@ -44,7 +44,7 @@ const Projects = (props) => {
             <div className="projects-grid">
                 {myProjectsData.projects.map((project, index) => {
                     const iconName = project.projectIcon.trim().toLocaleLowerCase()
-                    const ExternalIcon = externalLinkIcons[iconName]
+                    const ExternalIcon = externalLinkIcons[iconName] ? externalLinkIcons[iconName] : externalLinkIcons['none']
                     const iconCssId = iconName === 'none' ? 'external-icon' : project.name.trim().toLocaleLowerCase().replace(/\s/g, '') + "-icon"
                     let iconsCount = 0
                     return(
