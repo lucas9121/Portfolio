@@ -8,7 +8,7 @@ import { SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop, SiExpo } fro
 import { TbBrandReactNative } from "react-icons/tb";
 import { FcGoogle } from 'react-icons/fc';
 import ImageSlider from '../ImageSlider';
-import myProjectsData from './MyProjectsData'; 
+import myProjectsData from './Data/ProjectsData.json'; 
 
 
 const techIcons = {
