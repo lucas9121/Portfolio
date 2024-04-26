@@ -8,7 +8,11 @@ const rl = readline.createInterface({
 });
 
 // Construct the absolute path to MyProjects.js
-const myProjectsPath = path.resolve(__dirname, '../src/components/Projects/MyProjects.js');
+const myProjectsPath = path.resolve(__dirname, '../src/components/Projects/Data/ProjectsData.json');
+const myCSSPath = path.resolve(__dirname, '../src/components/Projects/Projects.css');
+
+
+
 
 // Function to generate lorem ipsum text for description
 function generateLoremIpsum() {
@@ -47,25 +51,23 @@ function promptUserForInput() {
                       projectIcon: projectIcon ? projectIcon : 'none',
                       projectLink: projectLink ? projectLink : '',
                       liveLink: liveLink ? liveLink : '',
-                      color: color ? color : '',
+                      color: color ? color : 'inherit',
                       images: images ? images : []
                     };
 
-                    // Writing object to MyProjects.js file
+                    // Writing object to ProjectsData.json file
                     fs.readFile(myProjectsPath, 'utf8', (err, data) => {
                       console.log('file being read')
                       if (err) throw err;
 
-                        // Parse the JSON data
-                        const myProjects = JSON.parse(data);
-
-                        // Push the new project object to the myProject array
-                        myProjects.push(projectObject);
+                      const myProjects = JSON.parse(data);
+                      myProjects.projects.push(projectObject);
+                      const newData = JSON.stringify(myProjects)
 
                       // Write the modified data back to the file
-                      fs.writeFile(myProjectsPath, data, (err) => {
+                      fs.writeFile(myProjectsPath, newData, (err) => {
                           if (err) throw err;
-                          console.log('Project object has been added to MyProjects.js');
+                          console.log('Project object has been added to ProjectsData.json');
                           rl.close();
                       });
                     });
