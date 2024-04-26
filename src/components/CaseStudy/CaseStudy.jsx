@@ -1,7 +1,7 @@
 import './CaseStudy.css'
 import { useParams, Link } from 'react-router-dom'
 import { useEffect } from 'react'
-import myProjectsData from '../Projects/MyProjectsData'
+import myProjectsData from '../Projects/Data/ProjectsData.json'
 import Footer from '../Footer/Footer'
 
 export default function CaseStudy ({toggle}){
@@ -32,7 +32,7 @@ export default function CaseStudy ({toggle}){
     <section className='content-section'>
       <div id={toggle ? "case-study-dark-mode" : "case-study-light-mode"}>
         <h2 className='case-study-name'>{name.toLowerCase()} </h2>
-        {images && images.length > 0 && <img className='case-study-image' src={optimizeImage(images[0].src)} alt={`${name} image`} loading='lazy' /> }
+        {images && images.length > 0 && <img className='case-study-image' src={optimizeImage(images[0].src)} alt={`${name} image`} /> }
         {
           liveLink ? <Link to={liveLink} target="_blank" rel="noreferrer" className="case-study-btn"> Live Link </Link> : 
           <Link to={projectLink} target="_blank" rel="noreferrer" className="case-study-btn"> Project Link </Link>
