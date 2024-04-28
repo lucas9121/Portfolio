@@ -46,7 +46,7 @@ function promptUserForInput() {
                     const projectObject = {
                       name: name ? name : 'Test',
                       summary: summary || generateLoremIpsum(),
-                      description: description || generateLoremIpsum(),
+                      description: description ? description.replace(/\\n/g, '\n') : generateLoremIpsum(),
                       tech: tech.split(',').map(tech => tech.trim()).join(', '),
                       projectIcon: projectIcon ? projectIcon : 'none',
                       projectLink: projectLink ? projectLink : '',
