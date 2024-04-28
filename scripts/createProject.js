@@ -61,7 +61,7 @@ function promptUserForInput() {
                       if (err) throw err;
 
                       const myProjects = JSON.parse(data);
-                      myProjects.projects.push(projectObject);
+                      myProjects.projects.unshift(projectObject);
                       const newData = JSON.stringify(myProjects)
 
                       // Write the modified data back to the file
