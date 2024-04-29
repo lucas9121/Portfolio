@@ -29,16 +29,41 @@ function createCssId(color) {
   return `#${color.replace('#', '')}`;
 }
 
+// Function to format the date as YYYY-MM-DD
+function formatDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+// Function to provide options and prompt user for input
+function promptUserWithOptions(question, options, callback) {
+  const formattedOptions = options.map((option, index) => `${index + 1}. ${option}`).join('\n');
+  rl.question(`${question}\n${formattedOptions}\nChoice: `, (choice) => {
+    const index = parseInt(choice.trim(), 10) - 1;
+    if (index >= 0 && index < options.length) {
+      callback(options[index]);
+    } else {
+      console.log('Invalid choice. Please select a valid option.');
+      promptUserWithOptions(question, options, callback);
+    }
+  });
+}
+
 // Recursive function to prompt user for input
 function promptUserForInput() {
+  const projectRoleOptions = ['Fullstack', 'Frontend', 'Backend'];
+  const projectCategoryOptions = ['Personal', 'Work'];
+
   rl.question('Enter project name: ', (name) => {
     rl.question('Enter project summary: ', (summary) => {
       rl.question('Enter project description (press Enter for default lorem ipsum): ', (description) => {
         rl.question('Enter technologies (separated by commas): ', (tech) => {
-          rl.question('Enter project icon name (optional): ', (projectIcon) => {
-            rl.question('Enter project link (optional): ', (projectLink) => {
-              rl.question('Enter live link (optional): ', (liveLink) => {
-                rl.question('Enter color (optional): ', (color) => {
+          promptUserWithOptions('Select project role:', projectRoleOptions, (projectRole) => {
+            promptUserWithOptions('Select project category:', projectCategoryOptions, (projectCategory) => {
+              rl.question('Enter project (Github) link (optional): ', (projectLink) => {
+                rl.question('Enter live link (optional): ', (liveLink) => {
                   // Constructing the images array
                   const images = [];
                   promptUserForImage(images, () => {
@@ -47,12 +72,15 @@ function promptUserForInput() {
                       name: name ? name : 'Test',
                       summary: summary || generateLoremIpsum(),
                       description: description ? description.replace(/\\n/g, '\n') : generateLoremIpsum(),
-                      tech: tech.split(',').map(tech => tech.trim()).join(', '),
+                      tech: tech.split(',').map(tech => tech.trim().toUpperCase()).join(', '),
                       projectIcon: projectIcon ? projectIcon : 'none',
+                      projectRole,
+                      projectCategory,
                       projectLink: projectLink ? projectLink : '',
                       liveLink: liveLink ? liveLink : '',
                       color: color ? color : 'inherit',
-                      images: images ? images : []
+                      images: images ? images : [],
+                      dateCreated: formatDate(new Date()),
                     };
 
                     // Writing object to ProjectsData.json file
@@ -71,7 +99,7 @@ function promptUserForInput() {
                           rl.close();
                       });
                     });
-                  });
+                  });                
                 });
               });
             });
