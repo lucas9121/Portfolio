@@ -10,7 +10,13 @@ const rl = readline.createInterface({
 // Construct the absolute path to MyProjects.js
 const myProjectsPath = path.resolve(__dirname, '../src/components/Projects/Data/ProjectsData.json');
 
-
+const allLettersAndNumbers = [
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
+  'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 
+  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+];
 
 
 // Function to generate lorem ipsum text for description
@@ -20,7 +26,13 @@ function generateLoremIpsum() {
 
 // Function to generate a random ID for images
 function generateRandomId() {
-  return Math.floor(Math.random() * 1000) + 1;
+  let randomId = ""
+  let randomIdx
+  for(let i = 0; i < 11; i++){
+    randomIdx = Math.floor(Math.random() * (allLettersAndNumbers.length - 1))
+    randomId += allLettersAndNumbers[randomIdx]
+  }
+  return randomId
 }
 
 // Function to format the date as YYYY-MM-DD
@@ -63,16 +75,15 @@ function promptUserForInput() {
                   promptUserForImage(images, () => {
                     // Constructing the object
                     const projectObject = {
+                      _id: generateRandomId(),
                       name: name ? name : 'Test',
                       summary: summary || generateLoremIpsum(),
                       description: description ? description.replace(/\\n/g, '\n') : generateLoremIpsum(),
                       tech: tech.split(',').map(tech => tech.trim().toUpperCase()).join(', '),
-                      projectIcon: projectIcon ? projectIcon : 'none',
                       projectRole,
                       projectCategory,
                       projectLink: projectLink ? projectLink : '',
                       liveLink: liveLink ? liveLink : '',
-                      color: color ? color : 'inherit',
                       images: images ? images : [],
                       dateCreated: formatDate(new Date()),
                     };
