@@ -9,7 +9,6 @@ const rl = readline.createInterface({
 
 // Construct the absolute path to MyProjects.js
 const myProjectsPath = path.resolve(__dirname, '../src/components/Projects/Data/ProjectsData.json');
-const myCSSPath = path.resolve(__dirname, '../src/components/Projects/Projects.css');
 
 
 
@@ -22,11 +21,6 @@ function generateLoremIpsum() {
 // Function to generate a random ID for images
 function generateRandomId() {
   return Math.floor(Math.random() * 1000) + 1;
-}
-
-// Function to create CSS ID based on color
-function createCssId(color) {
-  return `#${color.replace('#', '')}`;
 }
 
 // Function to format the date as YYYY-MM-DD
