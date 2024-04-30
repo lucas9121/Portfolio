@@ -2,6 +2,7 @@ import React from 'react';
 import "./Projects.css"
 import { Link } from 'react-router-dom';
 import { BsGithub, BsJoystick } from 'react-icons/bs';
+import { BiLogoNetlify } from "react-icons/bi";
 import { FaCss3Alt, FaBootstrap, FaTruck, FaDungeon, FaCoffee, FaExternalLinkAlt, FaHtml5, FaNodeJs, FaGitAlt } from 'react-icons/fa';
 import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
 import { SiMongodb, SiExpress, SiReact, SiHeroku, SiAdobephotoshop, SiExpo } from 'react-icons/si';
@@ -27,6 +28,7 @@ const techIcons = {
     expo: SiExpo,
     firebase: IoLogoFirebase,
     git: FaGitAlt,
+    netlify: BiLogoNetlify,
 };
 
 const externalLinkIcons = {
