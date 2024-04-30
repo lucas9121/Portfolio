@@ -33,9 +33,12 @@ export default function About({toggle, isClicked}){
                             <li>MongoDb</li>
                             <li>Express</li>
                             <li>Git</li>
+                            <li>Expo</li>
+                            <li>Firebase</li>
                             <li>Rest API</li>
                             <li>NPM</li>
                             <li>React</li>
+                            <li>React Native</li>
                             <li>NodeJS</li>
                             <li>MVC</li>
                             <li>Postman</li>
