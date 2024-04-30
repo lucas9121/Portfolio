@@ -18,15 +18,17 @@
 
 .case-study-name {
   color: inherit;
-  font-size: clamp(2.8rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   transition: color 2s;
   text-transform: uppercase;
 }
 
 .case-study-image {
   width: 80%;
+  height: clamp(200px, 65vw, 800px);
+  max-height: 800px;
   max-width: 1000px;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem;
   border: solid;
   border-radius: 10px;
 }
@@ -43,7 +45,7 @@
 
 .case-study-title {
   font-weight: 700;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(1.7rem, 5vw, 2.8rem);
   margin-bottom: clamp(1.5rem, 5vw, 3rem);
   color: inherit;
   transition: color 2s;
@@ -51,7 +53,7 @@
 
 .case-study-content > p {
     text-align: start;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 400;
     max-width: 60rem;
     line-height: 1.5;
@@ -59,6 +61,10 @@
     text-indent: 2%;
     color: inherit;
     transition: color 2s;
+}
+
+.case-study-tools {
+  padding-bottom: 6rem;
 }
 
 .case-study-skills {
@@ -82,7 +88,7 @@
 }
 
 .case-study-btn {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 600;
     border: 1px solid transparent;
     cursor: pointer;
@@ -110,4 +116,23 @@
   gap: 1rem;
 }
 
+
+/* ////////////////////////////////  Screen Sizes   //////////////////////////////// */
+@media (max-width: 450px){
+  .case-study-content {
+    padding: 4rem 0;
+  }
+
+  .case-study-tools {
+    padding-bottom: 4rem;
+  }
+
+  .case-study-links {
+    padding-bottom: 5rem;
+  }
+
+}
+
+@media (max-width: 400px){
+}
 
