@@ -255,8 +255,8 @@ input:checked + .slider:before {
 @media (max-width: 1250px){
   .sticky > nav {
     position: relative;
-    background: #000000cc;
-    padding: 0 20px;
+    background: #2e679c;
+    padding: 0 15px;
   }
 
   .sticky > nav > .hamburger {
