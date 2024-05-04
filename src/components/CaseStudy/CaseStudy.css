@@ -52,12 +52,12 @@
 }
 
 .case-study-content > p {
-    text-align: start;
+    text-align: center;
     font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 400;
     max-width: 60rem;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 auto;
     text-indent: 2%;
     color: inherit;
     transition: color 2s;
